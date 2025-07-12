@@ -1,0 +1,22 @@
+blog-data/
+├── categories/
+│   ├── news.json
+│   ├── applications.json
+│   ├── ai.json
+│   ├── events.json
+│   └── analysis.json
+├── posts/
+│   ├── ai-sensor.md
+│   ├── node-red.md
+│   ├── quantum-computing.md
+│   └── hart-modem.md
+├── images/
+│   ├── ai-sensor.jpg
+│   ├── node-red.jpg
+│   ├── quantum-computing.jpg
+│   └── hart-modem.jpg
+├── authors/
+│   ├── hesam-moshiri.json
+│   ├── sonu-daryanani.json
+│   └── maurizio-di-paolo-emilio.json
+└── README.md
