@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Raspberry Pi Weather Station",
+    "description": "Ứng dụng thời tiết IoT với Raspberry Pi.",
+    "image": "https://img.freepik.com/free-photo/smart-agriculture-iot-with-hand-planting_53876-104089.jpg",
+    "url": "posts/weather-station.md",
+    "author": "Pham Van B",
+    "date": "2025-05-20"
+  },
+  {
+    "title": "Home Automation System",
+    "description": "Tự động hóa ngôi nhà với MQTT.",
+    "image": "https://img.freepik.com/premium-photo/futuristic-home-smart-control-panel-interface-hologram_118124-1939.jpg",
+    "url": "posts/home-automation.md",
+    "author": "Le Thi C",
+    "date": "2025-06-02"
+  },
+  {
+    "title": "Smart Traffic Light",
+    "description": "Hệ thống đèn giao thông thông minh dùng AI.",
+    "image": "https://img.freepik.com/premium-photo/ai-technology-city-smart-road-traffic_31965-49634.jpg",
+    "url": "posts/smart-traffic-light.md",
+    "author": "Do Thanh D",
+    "date": "2025-06-18"
+  }
+]
