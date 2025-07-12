@@ -1,0 +1,20 @@
+[
+  {
+    "title": "HART Modem Design Implementation",
+    "description": "Deep dive vào thiết kế modem HART cho hệ thống tự động.",
+    "image": "https://raw.githubusercontent.com/baogithub/assets/main/hart.png",
+    "url": "https://github.com/baogithub/post1"
+  },
+  {
+    "title": "AI‑Enabled Automotive Radar Sensors",
+    "description": "Ứng dụng AI để cải thiện khả năng nhận dạng radar ô tô.",
+    "image": "https://raw.githubusercontent.com/baogithub/assets/main/radar.jpg",
+    "url": "https://github.com/baogithub/post2"
+  },
+  {
+    "title": "Node‑Red GUI to Monitor Raspberry Pi",
+    "description": "Hướng dẫn sử dụng Node‑Red để theo dõi tài nguyên Raspberry Pi từ xa.",
+    "image": "https://raw.githubusercontent.com/baogithub/assets/main/nodered.jpg",
+    "url": "https://github.com/baogithub/post3"
+  }
+]
