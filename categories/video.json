@@ -1,8 +1,8 @@
 [
   {
-    "title": "What is an RTOS? (Real-Time Operating System)",
-    "description": "An explanation of what an RTOS is and how it's used in embedded systems.",
+    "title": "Linux in 100 Seconds",
+    "description": "A quick and visual overview of Linux in just 100 seconds.",
     "url": "https://www.youtube.com/watch?v=rrB13utjYV4",
-    "id": "rrB13utjYV4"
+    "embed": "https://www.youtube.com/embed/rrB13utjYV4"
   }
 ]
