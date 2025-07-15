@@ -6,7 +6,8 @@
         "categories": ["Apparel & Clothing", "Packing & Packaging"],
         "members": "822",
         "logo": "https://via.placeholder.com/50?text=DSPE",
-        "background": "linear-gradient(90deg, #F8F5F0, #F4CB8C)"
+        "background": "linear-gradient(90deg, #F8F5F0, #F4CB8C)",
+        "url": "https://10times.com/screen-printing-digital-printing-china"
     },
     {
         "date": "Thu, 11 - Sat, 13 Sep 2025",
@@ -15,7 +16,8 @@
         "categories": ["Agriculture & Forestry", "Food & Beverages"],
         "members": "5678",
         "logo": "https://via.placeholder.com/50?text=FISHEX",
-        "background": "linear-gradient(90deg, #F6FCF2, #D1F2B8)"
+        "background": "linear-gradient(90deg, #F6FCF2, #D1F2B8)",
+        "url": "https://10times.com/guangzhou-seafood-expo"
     },
     {
         "date": "Wed, 17 - Fri, 19 Sep 2025",
@@ -24,6 +26,7 @@
         "categories": ["Medical & Pharma", "Food & Beverages"],
         "members": "430",
         "logo": "https://via.placeholder.com/50?text=WPE",
-        "background": "linear-gradient(90deg, #F5F7FB, #B4C4DA)"
+        "background": "linear-gradient(90deg, #F5F7FB, #B4C4DA)",
+        "url": "https://10times.com/wpe-whpe-xian"
     }
 ]
