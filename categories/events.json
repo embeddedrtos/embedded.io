@@ -1,26 +1,29 @@
 [
-  {
-    "title": "Embedded Vietnam Meetup 2025",
-    "description": "Sự kiện meetup cộng đồng hệ thống nhúng.",
-    "image": "https://img.freepik.com/free-photo/people-having-networking-event_23-2148891243.jpg",
-    "url": "posts/ev-meetup-2025.md",
-    "author": "Embedded IO",
-    "date": "2025-08-01"
-  },
-  {
-    "title": "Tech Talk: AI in Embedded",
-    "description": "Buổi chia sẻ về AI trong hệ thống nhúng.",
-    "image": "https://img.freepik.com/free-photo/business-meeting_53876-138067.jpg",
-    "url": "posts/ai-tech-talk.md",
-    "author": "Nguyen Tuan",
-    "date": "2025-07-15"
-  },
-  {
-    "title": "Online Workshop Zephyr",
-    "description": "Hội thảo trực tuyến về Zephyr RTOS.",
-    "image": "https://img.freepik.com/free-photo/online-meeting_1098-18641.jpg",
-    "url": "posts/zephyr-workshop.md",
-    "author": "Le Minh",
-    "date": "2025-07-05"
-  }
+    {
+        "date": "Thu, 07 - Sat, 09 Aug 2025",
+        "title": "China International Screen Printing and Digital Intelligent Printing Expo",
+        "location": "Shanghai, China",
+        "categories": ["Apparel & Clothing", "Packing & Packaging"],
+        "members": "822",
+        "logo": "https://via.placeholder.com/50x50?text=DSPE",
+        "color": "#fcd6a3"
+    },
+    {
+        "date": "Thu, 11 - Sat, 13 Sep 2025",
+        "title": "China International (Guangzhou) Fisheries & Seafood Expo",
+        "location": "Guangzhou, China",
+        "categories": ["Agriculture & Forestry", "Food & Beverages"],
+        "members": "5678",
+        "logo": "https://via.placeholder.com/50x50?text=FISHEX",
+        "color": "#d5f9c1"
+    },
+    {
+        "date": "Wed, 17 - Fri, 19 Sep 2025",
+        "title": "WPE & WHPE",
+        "location": "Xi'an, China",
+        "categories": ["Medical & Pharma", "Food & Beverages"],
+        "members": "430",
+        "logo": "https://via.placeholder.com/50x50?text=WPE",
+        "color": "#e6eaf8"
+    }
 ]
