@@ -5,8 +5,8 @@
         "location": "Shanghai, China",
         "categories": ["Apparel & Clothing", "Packing & Packaging"],
         "members": "822",
-        "logo": "https://via.placeholder.com/50x50?text=DSPE",
-        "color": "#fcd6a3"
+        "logo": "https://via.placeholder.com/50?text=DSPE",
+        "background": "linear-gradient(90deg, #F8F5F0, #F4CB8C)"
     },
     {
         "date": "Thu, 11 - Sat, 13 Sep 2025",
@@ -14,8 +14,8 @@
         "location": "Guangzhou, China",
         "categories": ["Agriculture & Forestry", "Food & Beverages"],
         "members": "5678",
-        "logo": "https://via.placeholder.com/50x50?text=FISHEX",
-        "color": "#d5f9c1"
+        "logo": "https://via.placeholder.com/50?text=FISHEX",
+        "background": "linear-gradient(90deg, #F6FCF2, #D1F2B8)"
     },
     {
         "date": "Wed, 17 - Fri, 19 Sep 2025",
@@ -23,7 +23,7 @@
         "location": "Xi'an, China",
         "categories": ["Medical & Pharma", "Food & Beverages"],
         "members": "430",
-        "logo": "https://via.placeholder.com/50x50?text=WPE",
-        "color": "#e6eaf8"
+        "logo": "https://via.placeholder.com/50?text=WPE",
+        "background": "linear-gradient(90deg, #F5F7FB, #B4C4DA)"
     }
 ]
