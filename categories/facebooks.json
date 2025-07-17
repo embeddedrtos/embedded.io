@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Bài viết 1: Embedded RTOS",
+        "author": "EMRTOS Việt Nam",
+        "iframe": "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FemrtosVN%2Fposts%2Fpfbid02Ww49PRRwhf8irrN12qU6FguJcRq5bJa7zv9ZZhYhpynTYvSQ7QNJwcKGaWupQSNel&show_text=true&width=500"
+    },
+    {
+        "title": "Bài viết 2: Tài liệu FreeRTOS",
+        "author": "EMRTOS Việt Nam",
+        "iframe": "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FemrtosVN%2Fposts%2Fpfbid0v3HLdnSL5tVQNjBpygkXy31YRDZA678hzFUWKW1ffzBchhHdcVyjk6K4p6EifVGil&show_text=true&width=500"
+    },
+    {
+        "title": "Bài viết 3: STM32 và RTOS",
+        "author": "EMRTOS Việt Nam",
+        "iframe": "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FemrtosVN%2Fposts%2Fpfbid02DEooAxBmowcCrcVPMoqcntN4EcwWYLDGUEVRGQ8Si88vtPxsCQgDbjL32c75r2qDl&show_text=true&width=500"
+    }
+]
