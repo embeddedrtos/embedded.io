@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Startup Event",
+        "image": "https://example.com/image1.jpg",
+        "description": "Sự kiện Startup vừa diễn ra rất thành công!",
+        "link": "https://facebook.com/post1"
+    },
+    {
+        "title": "Enterprise News",
+        "image": "https://example.com/image2.jpg",
+        "description": "Doanh nghiệp đang áp dụng công nghệ AI mạnh mẽ!",
+        "link": "https://facebook.com/post2"
+    }
+]
