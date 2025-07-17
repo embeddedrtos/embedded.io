@@ -1,20 +1,20 @@
 [
-  {
-    "title": "Embedded RTOS Group Post",
-    "image": "https://scontent...jpg",
-    "description": "Toàn bộ nội dung bài đăng từ nhóm Embedded RTOS...",
-    "link": "https://www.facebook.com/groups/embeddedrtos/posts/1467690404263991/"
-  },
-  {
-    "title": "Navigating #LondonTechWeek",
-    "image": "https://static.xx.fbcdn.net/safe_image.php?d=safe_image_url_1032460162401808",
-    "description": "Navigating #LondonTechWeek for the first time? Or just curious about how to make the most of the week?",
-    "link": "https://www.facebook.com/LDNtechweek/posts/1032460162401808"
-  },
-  {
-    "title": "Health Innovation Network",
-    "image": "https://static.xx.fbcdn.net/safe_image.php?d=safe_image_url_1031672085813949",
-    "description": "Introducing Health Innovation Network South London as a LondonTechWeek 2025 partner.",
-    "link": "https://www.facebook.com/LDNtechweek/posts/1031672085813949"
-  }
+    {
+        "title": "Bài viết 1: Embedded RTOS",
+        "author": "EMRTOS Việt Nam",
+        "iframe": "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FemrtosVN%2Fposts%2Fpfbid02Ww49PRRwhf8irrN12qU6FguJcRq5bJa7zv9ZZhYhpynTYvSQ7QNJwcKGaWupQSNel&show_text=true&width=350",
+        "description": "Nội dung chia sẻ về RTOS hữu ích cho cộng đồng lập trình nhúng."
+    },
+    {
+        "title": "Bài viết 2: Tài liệu FreeRTOS",
+        "author": "EMRTOS Việt Nam",
+        "iframe": "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FemrtosVN%2Fposts%2Fpfbid0v3HLdnSL5tVQNjBpygkXy31YRDZA678hzFUWKW1ffzBchhHdcVyjk6K4p6EifVGil&show_text=true&width=350",
+        "description": "Bộ tài liệu FreeRTOS thực chiến, ví dụ code cụ thể."
+    },
+    {
+        "title": "Bài viết 3: STM32 và RTOS Demo",
+        "author": "EMRTOS Việt Nam",
+        "iframe": "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FemrtosVN%2Fposts%2Fpfbid02DEooAxBmowcCrcVPMoqcntN4EcwWYLDGUEVRGQ8Si88vtPxsCQgDbjL32c75r2qDl&show_text=true&width=350",
+        "description": "Demo sử dụng STM32 kết hợp RTOS với ứng dụng thực tế."
+    }
 ]
