@@ -40,39 +40,5 @@
     "created_time": "2025-04-20T11:39:40+0000",
     "permalink_url": "https://www.facebook.com/644735448631616/posts/575319902239838",
     "full_picture": "https://scontent.fsgn2-9.fna.fbcdn.net/v/t39.30808-6/492399537_575319872239841_6222798699819502720_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=dkcJdg8EupUQ7kNvwFYzwcu&_nc_oc=Adm6CJltY8JYy_dmLEr0jmy4y1vTOD1hmpt6rmO9armHfBFmz9OfBvso0wTNCLQaz2fLYSS1VsaQs8p6TZry-4iw&_nc_zt=23&_nc_ht=scontent.fsgn2-9.fna&edm=AKIiGfEEAAAA&_nc_gid=sZNEmj-gtG807uVqB3dQ_Q&oh=00_AfTpaKljxo61nO7Soo_5lrBa_2jzCu9Bo7WJJVmeoqSdzg&oe=6884354D"
-  },
-  {
-    "id": "108431818921623_558121077293054",
-    "message": "Mua về test thử nhé!",
-    "created_time": "2025-03-30T02:31:30+0000",
-    "permalink_url": "https://www.facebook.com/644735448631616/posts/558121077293054"
-  },
-  {
-    "id": "108431818921623_557582100680285",
-    "created_time": "2025-03-29T10:20:37+0000",
-    "permalink_url": "https://www.facebook.com/644735448631616/posts/557582100680285"
-  },
-  {
-    "id": "108431818921623_556330317472130",
-    "created_time": "2025-03-27T17:53:54+0000",
-    "permalink_url": "https://www.facebook.com/644735448631616/posts/556330317472130"
-  },
-  {
-    "id": "108431818921623_556310687474093",
-    "message": "🔍 I3C - Chuẩn giao tiếp tiên tiến thay thế I2C và SPI \n\nBạn đã nghe về I3C chưa? Đây là một giao thức giao tiếp nối tiếp mới, được phát triển bởi MIPI Alliance, với mục tiêu khắc phục những hạn chế của I2C và SPI, đồng thời nâng cao hiệu suất và giảm mức tiêu thụ năng lượng.\n\n🚀 Vì sao nên quan tâm đến I3C?\n✅ Tốc độ cao hơn: I3C có thể đạt tới 12.5 MHz, nhanh hơn nhiều so với I2C truyền thống (400 kHz - 1 MHz).\n✅ Tiết kiệm chân kết nối: Chỉ cần 2 dây (SDA & SCL), giống I2C nhưng vẫn có thể đạt tốc độ gần SPI.\n✅ Tích hợp động: Hỗ trợ dynamic addressing, giúp thiết bị có thể thay đổi địa chỉ mà không cần cấu hình cố định.\n✅ Tiêu thụ điện năng thấp: Được tối ưu hóa cho các ứng dụng tiết kiệm năng lượng như thiết bị đeo, cảm biến thông minh, IoT.\n✅ Tương thích ngược với I2C: Có thể hoạt động với các thiết bị I2C hiện có mà không cần thay đổi phần cứng quá nhiều.\n\n📌 Ứng dụng của I3C\n🔹 Các cảm biến trong smartphone, thiết bị đeo thông minh.\n🔹 Hệ thống nhúng và IoT cần tốc độ truyền dữ liệu cao và tiết kiệm năng lượng.\n🔹 Công nghệ ô tô, robot, và các thiết bị công nghiệp hiện đại.\n\n💡 I3C sẽ là xu hướng thay thế I2C và SPI trong tương lai?\nBạn nghĩ sao về tiềm năng của I3C? Cùng thảo luận nhé! 👇👇\n\n#I3C #EmbeddedSystems #IoT #Firmware #MIPI #CommunicationProtocol #EmbeddedEngineer #EmRTOS",
-    "created_time": "2025-03-27T17:20:40+0000",
-    "permalink_url": "https://www.facebook.com/644735448631616/posts/556310687474093"
-  },
-  {
-    "id": "108431818921623_556296637475498",
-    "created_time": "2025-03-27T16:56:57+0000",
-    "permalink_url": "https://www.facebook.com/644735448631616/posts/556296637475498?substory_index=668918765792034",
-    "full_picture": "https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/487203848_556296644142164_5328215667966440932_n.jpg?stp=dst-jpg_s720x720_tt6&_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=5u3KklKB4PMQ7kNvwEWWQSw&_nc_oc=AdmMarRlwgjjb3ppOTBzSUYFHjxvBCcfSf9FytyerRF3sDl_uT1pa8B8WUpg2XqEAC648h5kb_hVRA5BOIFwP3kK&_nc_zt=23&_nc_ht=scontent.fsgn2-6.fna&edm=AKIiGfEEAAAA&_nc_gid=sZNEmj-gtG807uVqB3dQ_Q&oh=00_AfTWTh0FB2zIBHjW5YPJx1cb8fiWb-wd4Bf3gHlib83gAQ&oe=68842A8A"
-  },
-  {
-    "id": "108431818921623_9806230196065587",
-    "created_time": "2025-03-27T16:45:16+0000",
-    "permalink_url": "https://www.facebook.com/644735448631616/posts/9806230196065587?substory_index=9806230196065587",
-    "full_picture": "https://scontent.fsgn2-10.fna.fbcdn.net/v/t39.30808-6/487352413_556288777476284_2456963263954988821_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=7TYEw9nHjzgQ7kNvwFmZ7Zz&_nc_oc=Adn60jyiACWKvSdZhBbwBtAwIyEujV34m-3OiPhfuewA-DDd__HbzgA9hs3Qj7lxOXruvPjd-QMzni5FSlcbBFBC&_nc_zt=23&_nc_ht=scontent.fsgn2-10.fna&edm=AKIiGfEEAAAA&_nc_gid=sZNEmj-gtG807uVqB3dQ_Q&oh=00_AfQ7NxuCg_iv0UEqk5zQn717gcv3Bfcgt50Icfst0Lh9kA&oe=68843366"
   }
 ]
