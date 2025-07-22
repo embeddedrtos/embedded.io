@@ -1,34 +1,16 @@
 [
-  {
-    "title": "Quantum Computing Breakthrough",
-    "description": "Đột phá trong máy tính lượng tử 2025.",
-    "image": "https://as2.ftcdn.net/jpg/02/71/35/77/1000_F_271357771_omlUZGSn9bNfvuMKibacRMzDz3Lm6j3l.jpg",
-    "url": "posts/quantum-computing.html",
-    "author": "Pham Van Nhat",
-    "date": "2025-07-13"
+ {
+    "id": "108431818921623_619165521188609",
+    "message": "🔥 Bare-metal vs RTOS – Lập trình nhúng chọn cái nào? 🔧⚙️\n\nTrong thế giới embedded, có 2 trường phái phổ biến khi phát triển firmware:\n\n✅ Bare-metal – \"Code trần\", không hệ điều hành\n✅ RTOS (Real-Time Operating System) – Hệ điều hành thời gian thực\n\nCùng so sánh chi tiết nhé 👇\n\n🔹 1. Bare-metal:\n\nViết code chạy trực tiếp trên vi điều khiển, không dùng hệ điều hành.\n\nMọi thứ từ quản lý thời gian, task, ngắt… đều lập trình thủ công.\n\n✅ Ưu điểm:\n\nTối ưu tài nguyên (RAM/FLASH thấp)\n\nTốc độ xử lý nhanh\n\nKiểm soát toàn bộ hệ thống\n\n❌ Nhược điểm:\n\nKhó mở rộng\n\nKhó bảo trì khi project lớn\n\nDebug và xử lý đa nhiệm phức tạp\n\n🔹 2. RTOS:\n\nCho phép chia chương trình thành nhiều task độc lập chạy song song.\n\nQuản lý tài nguyên, ưu tiên, mutex, semaphore…\n\n✅ Ưu điểm:\n\nDễ quản lý task, dễ mở rộng\n\nCó sẵn các API hỗ trợ đồng bộ, quản lý thời gian\n\nPhù hợp với các ứng dụng phức tạp (IoT, công nghiệp, thiết bị thông minh…)\n\n❌ Nhược điểm:\n\nTốn tài nguyên hơn\n\nCần học thêm kiến thức về hệ điều hành\n\nDễ gặp lỗi đồng bộ nếu không hiểu kỹ\n\n📌 Kết luận:\n\nDự án đơn giản → Bare-metal là lựa chọn tốt.\n\nDự án phức tạp, nhiều task → nên chọn RTOS để dễ phát triển và bảo trì.\n\n💡 Thời sinh viên thường chỉ code Bare-metal, chỉ cần chạy được là xong. Nhưng để đi xa hơn với embedded, việc hiểu và biết dùng RTOS là điều không thể thiếu!\n\n---\n\n👉 Bạn đang dùng Bare-metal hay RTOS cho project của mình?\nChia sẻ góc nhìn dưới comment nhé! 👇\n\n#EmbeddedSystems #RTOS #BareMetal #FirmwareDevelopment #Embedded #RealTimeOS #LapTrinhNhanh #IoT #STM32 #FreeRTOS #EmbeddedRTOSVietnam #EmRTOSVN",
+    "created_time": "2025-06-18T13:05:07+0000",
+    "permalink_url": "https://www.facebook.com/644735448631616/posts/619165521188609",
+    "full_picture": "https://scontent.fsgn2-3.fna.fbcdn.net/v/t39.30808-6/508508390_619165477855280_400382910298611206_n.jpg?stp=dst-jpg_s720x720_tt6&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=2f9wrahUfscQ7kNvwFg3im0&_nc_oc=AdkXLIoWQENghQdt9K-I7uU-CpCR70txuUL2GtVd4pavZ3OfMHJy6Jv4WRevZgzp8_3MpgN9vwER89X4fIXZ-7-h&_nc_zt=23&_nc_ht=scontent.fsgn2-3.fna&edm=AKIiGfEEAAAA&_nc_gid=sZNEmj-gtG807uVqB3dQ_Q&oh=00_AfRYnfIIhqZrwZSYF8D2obxHGi0a8v23S3ZWwfhVG0siww&oe=68842A51"
   },
   {
-    "title": "Vietnam Chip Conference",
-    "description": "Sự kiện giới thiệu chip nội địa Việt Nam.",
-    "image": "https://img.freepik.com/free-photo/close-up-microchip-background_23-2148894631.jpg",
-    "url": "posts/vietnam-chip-conference.html",
-    "author": "Nguyen Van A",
-    "date": "2025-06-25"
+    "id": "108431818921623_575356332236195",
+    "message": "Việt Nam đang đứng ở đâu trên bản đồ công nghệ thế giới?\n\n📌 Nhìn sang Trung Quốc – người khổng lồ công nghệ mới trỗi dậy\nTrung Quốc bắt đầu chú trọng phát triển công nghệ từ những năm 1980, nhưng phải đến đầu thập niên 2000 – với chiến lược \"Made in China 2025\" – họ mới thực sự bứt phá. Từ một quốc gia chuyên gia công lắp ráp cho thế giới, Trung Quốc đã nhanh chóng chuyển mình trở thành trung tâm công nghệ toàn cầu. Hiện nay, họ dẫn đầu trong các lĩnh vực như trí tuệ nhân tạo (AI), 5G, sản xuất chip, xe điện, và thương mại điện tử với các tập đoàn khổng lồ như Huawei, Tencent, Alibaba hay BYD.\n\n🚀 Làm thế nào Trung Quốc vươn lên mạnh mẽ như vậy?\nThành công của Trung Quốc không phải ngẫu nhiên. Đó là kết quả của chiến lược dài hạn, sự đầu tư khổng lồ từ chính phủ và tinh thần học hỏi mạnh mẽ. Họ xây dựng hạ tầng hiện đại, thúc đẩy R&D, bảo vệ doanh nghiệp nội địa và đặc biệt là biết học hỏi từ những công nghệ có sẵn trên thế giới.\nThay vì bắt đầu từ con số 0, Trung Quốc chủ động tiếp cận, sao chép, cải tiến rồi mới phát triển thành công nghệ của riêng mình. Điển hình như ngành xe điện – từ việc học hỏi Tesla, họ đã tạo ra những thương hiệu nội địa đủ sức vươn ra thế giới.\n👉 Học nhanh, làm nhanh, làm đúng cái đã được kiểm chứng – đó là cách họ rút ngắn thời gian và tăng tốc hiệu quả.\n\n🌱 Vậy giới trẻ Việt Nam nên làm gì để thay đổi chính mình?\nỞ Việt Nam, phần lớn các nghiên cứu vẫn còn mang tính nhỏ lẻ, đơn độc và thiếu sự liên kết. Điều đó khiến sản phẩm công nghệ của chúng ta khó cạnh tranh được về giá cả và chất lượng.\nChúng ta cần thay đổi tư duy: phải học cách tận dụng lại những gì thế giới đã có. Không nhất thiết phải lao vào nghiên cứu mới, mơ hồ, tốn thời gian mà chưa chắc có kết quả. Cái gì thế giới đã mất cả chục năm để tìm ra, ta nên học lại, làm chủ thật tốt trước đã.\n📌 Khi đã bắt chước được gần 100%, hiểu sâu, làm vững, thì lúc đó mới nên bắt đầu phát triển “chất riêng” của mình.\n\n🧠 Thật ra, việc học cũng là một quá trình bắt chước có hệ thống\nTừ nhỏ đến đại học, chúng ta học bằng cách làm lại các ví dụ mẫu, thay số, áp công thức. Lập trình thì copy code trên mạng, sửa lại chút xíu để chạy được bài của mình.\nCao hơn một chút là biết chủ động tìm kiếm, lắp ghép lại các giải pháp có sẵn. Nhưng điểm nguy hiểm nhất là: rất ít người tự hỏi – tại sao bài toán lại được giải như vậy? Vì sao dòng code lại chạy được? Cốt lõi nằm ở đâu?\nChúng ta thường dừng lại ở mức \"làm được\" mà không chạm tới mức \"hiểu thấu\". Và đó chính là rào cản lớn nhất khiến mình không thể đi xa hơn.\n\n🧩 Thay đổi tư duy ngầm – thay đổi tương lai\nTrong tiềm thức của không ít người Việt, mỗi khi thấy một sản phẩm công nghệ “Made in Vietnam” ra đời, điều đầu tiên họ nghĩ tới lại là: “Chắc hàng Trung Quốc, gắn mác Việt thôi.”\nĐó là một lối suy nghĩ vô thức, nhưng rất nguy hiểm. Nó không chỉ làm tổn thương người làm thật – mà còn khiến chúng ta tự hạ thấp chính mình, ngay cả khi đang bước đầu tạo ra giá trị thật sự.\n\n📦 Sự thật là: một sản phẩm công nghệ có thể gồm hàng ngàn linh kiện và thành phần phức tạp bên trong. Hiện tại, Việt Nam chưa đủ thời gian và hạ tầng công nghiệp để tự làm tất cả. Và điều đó không có gì đáng xấu hổ.\n👉 Hãy tận dụng những gì đã có, và tập trung đưa chất xám của người Việt vào từng thiết kế, từng dòng code, từng giải pháp. Mỗi ngày, chỉ cần nội địa hóa thêm 1%, rồi sẽ đến 10%, 30% – tương lai 100% sản phẩm Việt không phải là điều viển vông.\n\n💡 Chất Việt không nằm ở tem mác – mà nằm ở trí tuệ, tư duy, và sự bền bỉ.\n\n⚡ Thời đại mới – công cụ mới – cơ hội mới\nNgày xưa, muốn hiểu sâu một vấn đề phải mất hàng tháng mò mẫm. Nhưng ngày nay, với AI như ChatGPT, bạn có thể hỏi bất kỳ điều gì, bất kỳ lúc nào – và nhận được câu trả lời ngay. Kiến thức chưa bao giờ dễ tiếp cận như bây giờ.\nVấn đề không phải là thiếu thông tin, mà là bạn có dám hỏi sâu, học kỹ và kiên trì đào đến tận gốc hay không.\n\n🔥 Bạn nghĩ sao về công nghệ Việt hôm nay? Liệu đã đến lúc ta tin vào chính mình?\n\n#CôngNghệViệt #MadeInVietnam #TựHàoViệtNam #ChấtXámViệt #CáchMạngCôngNghệ #TưDuyĐổiMới #StartUpViệt #AI #HọcĐểHiểu #TậnDụngCáiCóSẵn #BắtChướcĐểVượtLên #TechVietnam #ThayĐổiTừngPhầnTrăm #EmRTOSVN",
+    "created_time": "2025-04-20T12:37:22+0000",
+    "permalink_url": "https://www.facebook.com/644735448631616/posts/575356332236195",
+    "full_picture": "https://scontent.fsgn2-3.fna.fbcdn.net/v/t39.30808-6/492046509_575360372235791_6821410645304247419_n.jpg?stp=dst-jpg_s720x720_tt6&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=1YVkDzTHVfUQ7kNvwEkUII1&_nc_oc=Admrp_kvdZ3JTN1ZUrMEWHyAunBmN9DvCgbZJYoy6KexvTnoqAqlOAGjbJK3ntetsR4RvEVFs_qNoeQ1v13fARGn&_nc_zt=23&_nc_ht=scontent.fsgn2-3.fna&edm=AKIiGfEEAAAA&_nc_gid=sZNEmj-gtG807uVqB3dQ_Q&oh=00_AfTYtXnsBRk05lUJ9w2gpRf5EK9XYQiGJOy3vJoUlbS7ZQ&oe=68843485"
   },
-  {
-    "title": "AI Weekly Update",
-    "description": "Bản tin cập nhật AI hàng tuần.",
-    "image": "https://img.freepik.com/premium-photo/futuristic-artificial-intelligence-processor-chip-cyber-technology-background_76964-92.jpg",
-    "url": "posts/ai-weekly-update.html",
-    "author": "Trinh Bao",
-    "date": "2025-07-01"
-  },
-  {
-    "title": "Quantum Computing Breakthrough",
-    "description": "Đột phá trong máy tính lượng tử 2025.",
-    "image": "https://as2.ftcdn.net/jpg/02/71/35/77/1000_F_271357771_omlUZGSn9bNfvuMKibacRMzDz3Lm6j3l.jpg",
-    "url": "posts/quantum-computing.html",
-    "author": "Maurizio Di Paolo Emilio",
-    "date": "2025-07-10"
-  }
 ]
