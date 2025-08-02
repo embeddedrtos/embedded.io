@@ -9,9 +9,6 @@ jobs:
   test-runner:
     runs-on: self-hosted
 
-    env:
-      DEPLOY_PATH: /home/${{ secrets.WEB_USER }}/public_html/embeddedio
-
     steps:
       - name: Checkout repository code
         uses: actions/checkout@v4
@@ -22,9 +19,15 @@ jobs:
           echo "📂 List of files:"
           ls -la
 
-      - name: Create deploy directory
-        run: mkdir -p "$DEPLOY_PATH"
+      - name: Determine deploy path and create directory
+        run: |
+          USERNAME=$(whoami)
+          DEPLOY_PATH="/home/$USERNAME/public_html/embeddedio"
+          echo "📁 Deploy path: $DEPLOY_PATH"
+          mkdir -p "$DEPLOY_PATH"
 
       - name: Sync project files into deploy directory
         run: |
+          USERNAME=$(whoami)
+          DEPLOY_PATH="/home/$USERNAME/public_html/embeddedio"
           rsync -av --exclude='.git' ./ "$DEPLOY_PATH"/ --delete
