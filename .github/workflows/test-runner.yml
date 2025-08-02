@@ -1,0 +1,13 @@
+name: embeddedio
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test-runner:
+    runs-on: self-hosted
+    steps:
+      - name: Echo runner message
+        run: echo "Self-hosted runner is running successfully!"
