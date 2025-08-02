@@ -8,6 +8,13 @@ on:
 jobs:
   test-runner:
     runs-on: self-hosted
+
     steps:
-      - name: Echo runner message
-        run: echo "Self-hosted runner is running successfully!"
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Display current directory and files
+        run: |
+          echo "📁 Current directory: $PWD"
+          echo "📂 List of files:"
+          ls -la
