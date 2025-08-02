@@ -4,7 +4,7 @@
     "title": "16th AUTOSAR Open Conference",
     "location": "Bruges, Belgium",
     "categories": ["AUTOSAR", "Automotive Embedded", "Software‑Defined Vehicle"],
-    "members": "undetermined",
+    "members": null,
     "logo": null,
     "background": "linear-gradient(135deg, #1E3C72, #2A5298)",
     "url": "https://www.autosar.org/news-events/detail?cHash=e8216ef66607047e1192f5caf9aa7167"
@@ -14,7 +14,7 @@
     "title": "Embedded World 2025",
     "location": "Nuremberg, Germany",
     "categories": ["Embedded Systems", "Arm", "Linux", "MCU", "IoT", "Edge AI"],
-    "members": "undetermined",
+    "members": null,
     "logo": null,
     "background": "linear-gradient(45deg, #434343, #000000)",
     "url": "https://www.arm.com/company/events?utm_campaign=mk32-2_apac-taiwan_na_2023_na_na_na"
@@ -24,7 +24,7 @@
     "title": "AutoTech 2025 (with AUTOSAR)",
     "location": "Novi, Michigan, USA",
     "categories": ["AUTOSAR", "Automotive Embedded", "MCU", "Factory Automation"],
-    "members": "undetermined"
+    "members": null,
     "logo": null,
     "background": "linear-gradient(120deg, #4CB8C4, #3CD3AD)",
     "url": "https://www.autosar.org/news-events/"
@@ -34,7 +34,7 @@
     "title": "CES 2025",
     "location": "Las Vegas, USA",
     "categories": ["Embedded Systems", "ARM", "IoT", "MCU", "Microsoft"],
-    "members": "undetermined",
+    "members": null,
     "logo": null,
     "background": "linear-gradient(60deg, #FF5F6D, #FFC371)",
     "url": "https://www.arm.com/company/events"
@@ -44,7 +44,7 @@
     "title": "Arm Developer Workshop & Tech Symposia",
     "location": "Global (Shanghai, Tokyo, Shenzhen…)",
     "categories": ["ARM", "MCU", "Linux", "Embedded Development", "AI"],
-    "members": "undetermined",
+    "members": null,
     "logo": null,
     "background": "linear-gradient(45deg, #434343, #000000)",
     "url": "https://www.arm.com/events"
