@@ -6,7 +6,7 @@
     "categories": ["AUTOSAR", "Automotive Embedded", "Software‑Defined Vehicle"],
     "members": null,
     "logo": null,
-    "background": "linear-gradient(135deg, #1E3C72, #2A5298)",
+    "background": "linear-gradient(135deg, #A1C4FD, #C2E9FB)",
     "url": "https://www.autosar.org/news-events/detail?cHash=e8216ef66607047e1192f5caf9aa7167"
   },
   {
@@ -16,7 +16,7 @@
     "categories": ["Embedded Systems", "Arm", "Linux", "MCU", "IoT", "Edge AI"],
     "members": null,
     "logo": null,
-    "background": "linear-gradient(45deg, #434343, #000000)",
+    "background": "linear-gradient(45deg, #FDEB71, #F8D800)",
     "url": "https://www.arm.com/company/events?utm_campaign=mk32-2_apac-taiwan_na_2023_na_na_na"
   },
   {
@@ -26,7 +26,7 @@
     "categories": ["AUTOSAR", "Automotive Embedded", "MCU", "Factory Automation"],
     "members": null,
     "logo": null,
-    "background": "linear-gradient(120deg, #4CB8C4, #3CD3AD)",
+    "background": "linear-gradient(120deg, #FFDEE9, #B5FFFC)",
     "url": "https://www.autosar.org/news-events/"
   },
   {
@@ -36,7 +36,7 @@
     "categories": ["Embedded Systems", "ARM", "IoT", "MCU", "Microsoft"],
     "members": null,
     "logo": null,
-    "background": "linear-gradient(60deg, #FF5F6D, #FFC371)",
+    "background": "linear-gradient(60deg, #FFF1EB, #ACE0F9)",
     "url": "https://www.arm.com/company/events"
   },
   {
@@ -46,7 +46,7 @@
     "categories": ["ARM", "MCU", "Linux", "Embedded Development", "AI"],
     "members": null,
     "logo": null,
-    "background": "linear-gradient(45deg, #434343, #000000)",
+    "background": "linear-gradient(45deg, #C6FFDD, #FBD786, #f7797d)",
     "url": "https://www.arm.com/events"
   }
 ]
