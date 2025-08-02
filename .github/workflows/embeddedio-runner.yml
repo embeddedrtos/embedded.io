@@ -18,3 +18,7 @@ jobs:
           echo "📁 Current directory: $PWD"
           echo "📂 List of files:"
           ls -la
+      - name: Copy repo to html_public
+        run: |
+          rsync -av --exclude='html_public' --exclude='.git' ./ html_public/
+
