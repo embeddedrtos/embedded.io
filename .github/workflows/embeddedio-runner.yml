@@ -8,15 +8,7 @@ on:
 jobs:
   test-runner:
     runs-on: self-hosted
-
     steps:
-      - name: 🧹 Reset runner before job
-        run: |
-          echo "🧹 Cleaning old runner files..."
-          rm -rf $HOME/actions-runner/_work/* || true
-          rm -rf $HOME/actions-runner/_diag/* || true
-          echo "✅ Reset done."
-
       - name: Checkout repository code
         uses: actions/checkout@v4
         with:
@@ -47,3 +39,16 @@ jobs:
           USERNAME=$(whoami)
           DEPLOY_PATH="/home/$USERNAME/public_html/embeddedio"
           rsync -av --exclude='.git' ./ "$DEPLOY_PATH"/ --delete
+
+  cleanup:
+    runs-on: self-hosted
+    needs: test-runner
+    if: always()
+    steps:
+      - name: Cleanup runner work & logs
+        run: |
+          echo "🧹 Cleaning runner work..."
+          rm -rf $HOME/actions-runner/_work/* || true
+          echo "🧹 Cleaning old logs..."
+          find $HOME/actions-runner/_diag -type f -mtime +1 -delete || true
+          echo "✅ Done"
