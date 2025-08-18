@@ -21,5 +21,5 @@ for post in data.get("data", []):
     print("Image:", post.get("full_picture", "No image"))
     print("-----")
 
-with open("posts.json", "w", encoding="utf-8") as f:
+with open("categories/posts.json", "w", encoding="utf-8") as f:
     json.dump(data["data"], f, ensure_ascii=False, indent=2)
