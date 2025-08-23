@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Author Schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "bio": {
+      "type": "string",
+      "minLength": 1
+    },
+    "avatar": {
+      "type": ["string", "null"],
+      "format": "uri-reference",
+      "default": "/images/default-avatar.png"
+    },
+    "job_title": {
+      "type": ["string", "null"]
+    },
+    "company": {
+      "type": ["string", "null"]
+    },
+    "email": {
+      "type": ["string", "null"],
+      "format": "email"
+    },
+    "socials": {
+      "type": "object",
+      "properties": {
+        "github": { "type": ["string", "null"], "format": "uri" },
+        "facebook": { "type": ["string", "null"], "format": "uri" },
+        "youtube": { "type": ["string", "null"], "format": "uri" },
+        "linkedin": { "type": ["string", "null"], "format": "uri" },
+        "twitter": { "type": ["string", "null"], "format": "uri" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": ["id", "name", "bio"],
+  "additionalProperties": false
+}
