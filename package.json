@@ -1,5 +1,5 @@
 {
   "scripts": {
-    "validate:json": "ajv validate -s author/schema.json -d author/author.json --strict=false"
+    "validate:author": "ajv validate -s author/schema.json -d author/author.json --strict=false"
   }
 }
