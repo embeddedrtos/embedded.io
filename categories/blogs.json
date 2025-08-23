@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "title": "Documentation Standard",
+    "date": "2025-08-23",
+    "tags": ["documentation", "api", "guide"],
+    "content": "# Documentation Standard\n\n> **Note**  \n> Much of the information in the API Reference section is available from within the e² studio tool via the [Developer Assistance](https://example.com/developer-assistance) feature.  \n> The information here can be referenced for additional details on API features.\n\n---\n\n## Key Points\n\n- **Bold text** dùng để nhấn mạnh  \n- *Italic text* dùng để làm nổi bật nhẹ  \n- [Link tham khảo](https://example.com) để dẫn người đọc đến nguồn ngoài  \n\n---\n\n## Example Code\n\n```c\n#include <stdio.h>\n\nint main() {\n    printf(\"Hello, Zephyr RTOS!\\n\");\n    return 0;\n}\n```"
+  }
+]
