@@ -16,9 +16,9 @@ authors/
 package.json
 ```
 
-* `schema.json` → defines required/optional fields and rules
-* `authors.json` → stores all author entries
-* `validate-author.yml` → automatically checks new entries for validity (for admin use)
+* `schema.json` → defines required/optional fields and rules  
+* `authors.json` → stores all author entries  
+* `validate-author.yml` → automatically checks new entries for validity (for admin use)  
 
 ---
 
@@ -30,7 +30,7 @@ Each author object must follow this schema:
 
 | Field  | Type   | Description                     |
 | ------ | ------ | ------------------------------- |
-| `id`   | string | Unique identifier (e.g., `"1"`) |
+| `id`   | string | Unique identifier               |
 | `name` | string | Full name of the author         |
 | `bio`  | string | Short biography                 |
 
@@ -38,7 +38,7 @@ Each author object must follow this schema:
 
 | Field                                                  | Type           | Description                                                   |
 | ------------------------------------------------------ | -------------- | ------------------------------------------------------------- |
-| `avatar`                                               | string         | Image URL (default: `/images/default-avatar.png`)             |
+| `avatar`                                               | string         | Image URL (default: `default-avatar.jpg`) |
 | `job_title`                                            | string or null | Job title of the author                                       |
 | `company`                                              | string or null | Company/organization                                          |
 | `email`                                                | string or null | Email address                                                 |
@@ -47,11 +47,37 @@ Each author object must follow this schema:
 
 ---
 
+## 🔑 Author ID Rules
+
+Each `id` must be **unique** across all authors.
+
+**Structure:**  
+```
+[One uppercase letter][Number code]
+```
+
+### Prefix Rules
+
+- **A** → Administrator, Developer  
+- **C** → Contributor  
+- **U** → User  
+- **R** → Recruiter  
+
+✅ Example valid IDs:  
+- `A001`, `C12`, `U7`, `R100`  
+
+❌ Invalid IDs:  
+- `a01` (lowercase not allowed)  
+- `123` (must start with a letter)  
+- `B001` (letter not in `[A, C, U, R]`)  
+
+---
+
 ## ✅ Example: Valid Author Entry
 
 ```json
 {
-  "id": "1",
+  "id": "A001",
   "name": "Pham Van Nhat",
   "bio": "Hi there, I'm Nhat, an embedded systems engineer passionate about IoT, real-time systems, and AI integration.",
   "avatar": "https://avatars.githubusercontent.com/u/156271796?v=4",
@@ -79,18 +105,20 @@ Each author object must follow this schema:
 }
 ```
 
-**Error:** Missing required field `name`.
+**Error:**  
+- Missing required field `name`.  
+- Invalid `id` format (must start with `A`, `C`, `U`, or `R` followed by number).  
 
 ---
 
 ## ✨ How to Add a New Author
 
-1. Open `authors/authors.json` in your editor.
-2. Add a new object **inside the JSON array** using the correct format:
+1. Open `authors/authors.json` in your editor.  
+2. Add a new object **inside the JSON array** using the correct format:  
 
 ```json
 {
-  "id": "3",
+  "id": "C002",
   "name": "New Author",
   "bio": "Short description about this author.",
   "avatar": null,
@@ -107,18 +135,17 @@ Each author object must follow this schema:
 }
 ```
 
-3. Save the file. ✅
+3. Save the file. ✅  
 
-> Tip: Always assign a **unique `id`** to each author. Avoid duplicates.
+> Tip: Always assign a **unique `id`**. Never reuse an existing one.
 
 ---
 
 ## 📖 References
 
-* [JSON Schema](https://json-schema.org/)
-* [AJV CLI](https://github.com/ajv-validator/ajv-cli)
+* [JSON Schema](https://json-schema.org/)  
+* [AJV CLI](https://github.com/ajv-validator/ajv-cli)  
 
 ---
 
-With this guide, you can **add new authors confidently**, ensuring their information is **standardized and complete**.
-
+With this guide, you can **add new authors confidently**, ensuring their information is **standardized, valid, and ready for automation** 🚀
