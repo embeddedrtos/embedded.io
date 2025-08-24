@@ -19,5 +19,5 @@ for blog in blogs:
         del blog["author_id"]  # remove author_id if you don’t need it
 
 # Overwrite blogs.json with enriched data
-with open("blogs.json", "w", encoding="utf-8") as f:
+with open("categories/blogs.json", "w", encoding="utf-8") as f:
     json.dump(blogs, f, ensure_ascii=False, indent=2)
