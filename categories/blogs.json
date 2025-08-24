@@ -1,23 +1,35 @@
 [
   {
-    "id": 1,
+    "id": "BL1",
     "title": "Documentation Standard",
+    "slug": "documentation-standard",
     "date": "2025-08-23",
     "tags": ["documentation", "api", "guide"],
+    "category": "Driver",
+    "author_id": "A001",
+    "excerpt": "Hướng dẫn viết tài liệu chuẩn mực cho API với ví dụ minh họa và code mẫu.",
     "content": "# Documentation Standard\n\n> **Note**  \n> Much of the information in the API Reference section is available from within the e² studio tool via the [Developer Assistance](https://example.com/developer-assistance) feature.  \n> The information here can be referenced for additional details on API features.\n\n---\n\n## Key Points\n\n- **Bold text** dùng để nhấn mạnh  \n- *Italic text* dùng để làm nổi bật nhẹ  \n- [Link tham khảo](https://example.com) để dẫn người đọc đến nguồn ngoài  \n\n---\n\n## Example Code\n\n```c\n#include <stdio.h>\n\nint main() {\n    printf(\"Hello, Zephyr RTOS!\\n\");\n    return 0;\n}\n```"
   },
   {
-    "id": 2,
+    "id": "BL2",
     "title": "Getting Started with FreeRTOS",
+    "slug": "getting-started-with-freertos",
     "date": "2025-08-22",
     "tags": ["freertos", "rtos", "embedded"],
+    "category": "RTOS",
+    "author_id": "A001",
+    "excerpt": "Giới thiệu FreeRTOS và các bước cơ bản để cấu hình, tạo task và chạy scheduler.",
     "content": "# Getting Started with FreeRTOS\n\nFreeRTOS là một hệ điều hành thời gian thực nhỏ gọn, phổ biến trên vi điều khiển.\n\n## Các bước cơ bản\n\n1. Tải FreeRTOS từ [freertos.org](https://www.freertos.org).  \n2. Cấu hình `FreeRTOSConfig.h` để phù hợp với MCU.  \n3. Tạo task và chạy scheduler.\n\n---\n\n## Ví dụ Task\n\n```c\n#include \"FreeRTOS.h\"\n#include \"task.h\"\n#include <stdio.h>\n\nvoid vTask1(void *pvParameters) {\n    while(1) {\n        printf(\"Task 1 running...\\n\");\n        vTaskDelay(1000 / portTICK_PERIOD_MS);\n    }\n}\n\nint main() {\n    xTaskCreate(vTask1, \"Task1\", 1000, NULL, 1, NULL);\n    vTaskStartScheduler();\n    while(1);\n}\n```"
   },
   {
-    "id": 3,
+    "id": "BL3",
     "title": "Introduction to Zephyr RTOS",
+    "slug": "introduction-to-zephyr-rtos",
     "date": "2025-08-21",
     "tags": ["zephyr", "rtos", "iot"],
+    "category": "ARM",
+    "author_id": "A001",
+    "excerpt": "Tổng quan về Zephyr RTOS mã nguồn mở với ưu điểm, tính năng và ví dụ Hello World.",
     "content": "# Introduction to Zephyr RTOS\n\nZephyr là một **RTOS mã nguồn mở** dành cho IoT và thiết bị nhúng. Nó hỗ trợ nhiều kiến trúc CPU và có hệ sinh thái driver phong phú.\n\n## Ưu điểm\n\n- Hỗ trợ nhiều kiến trúc (ARM, RISC-V, x86, ARC).  \n- Có **Device Tree** để cấu hình phần cứng.  \n- Tích hợp sẵn Bluetooth, networking, filesystem.  \n\n---\n\n## Ví dụ Hello World\n\n```c\n#include <zephyr/kernel.h>\n#include <zephyr/sys/printk.h>\n\nvoid main(void) {\n    printk(\"Hello, Zephyr!\\\\n\");\n}\n```"
   }
 ]
