@@ -4,19 +4,23 @@ import os
 
 # === Load environment variables ===
 LOGS_PATH = os.environ.get("LOGS_PATH")
+STORAGE_PATH = os.environ.get("STORAGE_PATH")
 
-if not LOGS_PATH:
-    raise EnvironmentError("❌ Missing BLOG_VIEWS or LOGS_PATH environment variables")
+if not LOGS_PATH or not STORAGE_PATH:
+    raise EnvironmentError("❌ Missing LOGS_PATH or STORAGE_PATH environment variables")
 
 # === File paths ===
 blogs_file = "categories/blogs.json"
-blog_views_file = "storage/blog_views.json" 
+blog_views_file = f"{STORAGE_PATH}/blog_views.json"
+
 
 if os.path.exists(blogs_file):
     with open(blogs_file, "r", encoding="utf-8") as f:
         blogs = json.load(f)
 else:
-    blogs = []
+    raise EnvironmentError(f"[ERROR] File not found: {blogs_file}")
+
+os.makedirs(os.path.dirname(blog_views_file), exist_ok=True)
 
 if os.path.exists(blog_views_file):
     with open(blog_views_file, "r", encoding="utf-8") as f:

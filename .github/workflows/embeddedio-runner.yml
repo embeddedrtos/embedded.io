@@ -22,15 +22,13 @@ jobs:
 
       - name: Determine deploy path and create directory
         run: |
-          USERNAME=$(whoami)
-          DEPLOY_PATH="/home/$USERNAME/public_html/embeddedio"
+          DEPLOY_PATH="/home/$USER/public_html/embeddedio"
           echo "📁 Deploy path: $DEPLOY_PATH"
           mkdir -p "$DEPLOY_PATH"
 
       - name: Run Python Script to Fetch Posts
         run: |
-          USERNAME=$(whoami)
-          source /home/$USERNAME/virtualenv/script/3.11/bin/activate
+          source /home/$USER/virtualenv/script/3.11/bin/activate
           python3 script/posts.py
           python3 script/blogs.py
           python3 script/blog_views.py
@@ -38,8 +36,7 @@ jobs:
 
       - name: Sync project files into deploy directory
         run: |
-          USERNAME=$(whoami)
-          DEPLOY_PATH="/home/$USERNAME/public_html/embeddedio"
+          DEPLOY_PATH="/home/$USER/public_html/embeddedio"
           rsync -av --exclude='.git' ./ "$DEPLOY_PATH"/ --delete
 
   cleanup:
