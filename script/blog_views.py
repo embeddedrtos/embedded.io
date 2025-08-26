@@ -3,15 +3,14 @@ import subprocess
 import os
 
 # === Load environment variables ===
-BLOG_VIEWS = os.environ.get("BLOG_VIEWS")
 LOGS_PATH = os.environ.get("LOGS_PATH")
 
-if not BLOG_VIEWS or not LOGS_PATH:
+if not LOGS_PATH:
     raise EnvironmentError("❌ Missing BLOG_VIEWS or LOGS_PATH environment variables")
 
 # === File paths ===
 blogs_file = "categories/blogs.json"
-blog_views_file = BLOG_VIEWS  
+blog_views_file = "storage/blog_views.json" 
 
 if os.path.exists(blogs_file):
     with open(blogs_file, "r", encoding="utf-8") as f:
