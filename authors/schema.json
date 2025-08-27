@@ -33,6 +33,41 @@
         "type": ["string", "null"],
         "format": "email"
       },
+      "roles": {
+        "type": ["string", "null"],
+        "enum": [
+          "admin",
+          "moderator",
+          "mentor",
+          "contributor",
+          "member",
+          "newbie",
+          "project_leader",
+          "tester",
+          null
+        ]
+      },
+      "badges": {
+        "type": ["array", "null"],
+        "items": {
+          "type": "string",
+          "enum": [
+            "top_contributor",
+            "helper",
+            "reviewer",
+            "bug_hunter",
+            "rtos_master",
+            "mcu_guru",
+            "linux_embedded",
+            "debugger_pro",
+            "hardware_maker",
+            "security_specialist",
+            "hackathon_winner",
+            "open_source_contributor",
+            "community_builder"
+          ]
+        }
+      },
       "socials": {
         "type": "object",
         "properties": {

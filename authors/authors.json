@@ -7,6 +7,8 @@
     "job_title": "Embedded Software Engineer",
     "company": "Ho Chi Minh City University of Technology",
     "email": "embeddedrtos.vietnam@gmail.com",
+    "roles": "admin",
+    "badges": ["top_contributor", "open_source_contributor"],
     "socials": {
       "github": "https://github.com/embeddedrtos",
       "facebook": "https://www.facebook.com/emrtosVN",
