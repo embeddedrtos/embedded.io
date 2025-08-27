@@ -32,6 +32,7 @@ jobs:
           python3 script/posts.py
           python3 script/blogs.py
           python3 script/blog_views.py
+          python3 script/roles_and_badges.py
           deactivate
 
       - name: Sync project files into deploy directory
