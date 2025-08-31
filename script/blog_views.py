@@ -31,14 +31,14 @@ else:
         json.dump(views_save, f)
 
 for blog in blogs:
-    blog_id = blog.get("id")
-    if not blog_id:
+    blog_slug = blog.get("id")
+    if not blog_slug:
         continue
 
     cmd = f'''
     cd "{LOGS_PATH}" && \
     for f in Aug-2025.tar.gz; do
-        tar -xOzf "$f" embedded.io.vn.log.1 | grep "/blogs/?id={blog_id}" | awk '{{print $1}}'
+        tar -xOzf "$f" embedded.io.vn.log.1 | grep "/blogs/?id={blog_slug}" | awk '{{print $1}}'
     done | wc -l
     '''
 
@@ -48,14 +48,14 @@ for blog in blogs:
         views_today = 0
 
     # Update cumulative views
-    previous_total = views_save.get(blog_id, 0)
+    previous_total = views_save.get(blog_slug, 0)
     new_total = previous_total + views_today
-    views_save[blog_id] = new_total
+    views_save[blog_slug] = new_total
 
     # Update blogs.json
     blog["views"] = new_total
 
-    print(f"{blog_id}: today +{views_today}, total {new_total}")
+    print(f"{blog_slug}: today +{views_today}, total {new_total}")
 
 with open(blogs_file, "w", encoding="utf-8") as f:
     json.dump(blogs, f, ensure_ascii=False, indent=2)
