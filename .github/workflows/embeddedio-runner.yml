@@ -33,7 +33,6 @@ jobs:
           python3 script/posts.py
           python3 script/blogs.py
           python3 script/blog_views.py
-          cp -r categories/blogs.json categories/blogs_all.json 
           deactivate
 
       - name: Sync project files into deploy directory
