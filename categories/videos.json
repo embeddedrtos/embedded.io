@@ -5,7 +5,7 @@
     "description": "Trong video này bạn sẽ học cách cài đặt môi trường Zephyr RTOS...",
     "channel_title": "Zephyr RTOS Việt Nam",
     "published_at": "2025-07-25T14:00:00Z",
-    "tags": ["Zephyr", "RTOS", "embedded", "Zephyr Việt Nam"],
+    "tags": ["Zephyr", "RTOS", "Driver"],
     "duration": "PT12M45S",
     "thumbnail_url": "https://i.ytimg.com/vi/pzcllub7kuU/maxresdefault.jpg"
   },
@@ -15,7 +15,7 @@
     "description": "Learn what Zephyr RTOS is, how it works and where it is used.",
     "channel_title": "ElectronicsV2",
     "published_at": "2022-05-01T10:00:00Z",
-    "tags": ["Zephyr", "RTOS", "IoT", "open source"],
+    "tags": ["IoT", "MCU"],
     "duration": "PT9M10S",
     "thumbnail_url": "https://i.ytimg.com/vi/Aq2aKXjLuKQ/maxresdefault.jpg"
   },
@@ -25,7 +25,7 @@
     "description": "Step-by-step tutorial on setting up Zephyr with STM32 boards.",
     "channel_title": "Embedded Arm",
     "published_at": "2023-08-15T15:30:00Z",
-    "tags": ["Zephyr", "STM32", "RTOS", "Getting Started"],
+    "tags": ["IOT", "STM32", "RTOS"],
     "duration": "PT13M50S",
     "thumbnail_url": "https://i.ytimg.com/vi/v2xJd7Qyb-g/maxresdefault.jpg"
   },
@@ -33,9 +33,9 @@
     "video_id": "gxYtG9pJxOg",
     "title": "Zephyr RTOS BLE Application Example",
     "description": "A BLE application demo using Zephyr on Nordic nRF52.",
-    "channel_title": "Nordic DevZone",
+    "channel_title": "RTOS",
     "published_at": "2022-12-10T12:00:00Z",
-    "tags": ["Zephyr", "Bluetooth", "BLE", "nRF52"],
+    "tags": ["Zephyr", "IOT"],
     "duration": "PT8M5S",
     "thumbnail_url": "https://i.ytimg.com/vi/gxYtG9pJxOg/maxresdefault.jpg"
   },
@@ -45,7 +45,7 @@
     "description": "A walkthrough of building and flashing a Zephyr app.",
     "channel_title": "Embedded Coder",
     "published_at": "2023-03-22T09:15:00Z",
-    "tags": ["Zephyr", "development", "embedded"],
+    "tags": ["Zephyr", "MCU"],
     "duration": "PT11M30S",
     "thumbnail_url": "https://i.ytimg.com/vi/oioTEx5kghk/maxresdefault.jpg"
   },
@@ -55,7 +55,7 @@
     "description": "Detailed breakdown of Zephyr RTOS architecture and internal scheduling.",
     "channel_title": "RTOS Insights",
     "published_at": "2024-06-18T14:45:00Z",
-    "tags": ["Zephyr", "Scheduler", "Kernel", "RTOS"],
+    "tags": ["MCU", "RTOS"],
     "duration": "PT14M20S",
     "thumbnail_url": "https://i.ytimg.com/vi/z3c7Lgf9YCI/maxresdefault.jpg"
   }
