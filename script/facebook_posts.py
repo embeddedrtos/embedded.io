@@ -79,7 +79,7 @@ for post in data.get("data", []):
         "description": description,
         "created_time": post["created_time"],
         "permalink_url": post["permalink_url"],
-        "image": post.get("full_picture"),
+        "full_picture": post.get("full_picture"),
     }
 
     if "author" in post:
