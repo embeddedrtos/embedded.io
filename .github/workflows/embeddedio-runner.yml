@@ -30,7 +30,8 @@ jobs:
         run: |
           source /home/$USER/virtualenv/script/3.11/bin/activate
           python3 script/roles_and_badges.py
-          python3 script/posts.py
+          python3 script/news.py
+          python3 script/facebook_posts.py
           python3 script/blogs.py
           python3 script/blog_views.py
           python3 script/events.py

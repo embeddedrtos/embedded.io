@@ -61,15 +61,8 @@ for post in data.get("data", []):
     # Check hashtags in message
     if "#news" in message.lower():
         news_posts.append(post)
-    if "#posts" in message.lower():
-        posts_posts.append(post)
 
 # Save posts containing #news
 if news_posts:
     with open("categories/news.json", "w", encoding="utf-8") as f:
         json.dump(news_posts, f, ensure_ascii=False, indent=2)
-
-# Save posts containing #posts
-if posts_posts:
-    with open("categories/posts.json", "w", encoding="utf-8") as f:
-        json.dump(posts_posts, f, ensure_ascii=False, indent=2)
