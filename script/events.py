@@ -49,7 +49,7 @@ def post_to_json(post_text):
     if not data["members"]:
         data["members"] = None
     if not data["background"]:
-        data["background"] = "linear-gradient(135deg, #A1C4FD, #C2E9FB)"
+        data["background"] = "linear-gradient(45deg, #FDEB71, #F8D800)"
 
     return data
 
