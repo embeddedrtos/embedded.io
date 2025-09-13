@@ -501,14 +501,12 @@ if ($type === 'graphql') {
         url
         createdAt
         updatedAt
-        state
         locked
-        answerChosen
         author { login avatarUrl url }
         category { id name description slug }
         labels(first: 10) { nodes { id name color description } }
         reactions(first: 20) { totalCount nodes { content user { login avatarUrl url } } }
-        comments(first: 20, orderBy: {field: UPDATED_AT, direction: ASC}) {
+        comments(first: 20) {
           totalCount
           nodes {
             id body bodyHTML createdAt updatedAt
