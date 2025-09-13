@@ -6,42 +6,56 @@ header('Content-Type: application/json; charset=utf-8');
 $GITHUB_OWNER = "embeddedrtos";
 $GITHUB_REPO  = "embedded.io";
 
-// read token from environment OR from a PHP constant (fallback)
+// Read token from environment or fallback constant
 $TOKEN_GITHUB = getenv('GITHUB_EMBEDDEDIO_TOKEN');
 if (!$TOKEN_GITHUB && defined('GITHUB_EMBEDDEDIO_TOKEN')) {
     $TOKEN_GITHUB = GITHUB_EMBEDDEDIO_TOKEN;
 }
 
-// cache settings (seconds)
-$CACHE_TTL = 300; // 5 minutes
-$cache_file = sys_get_temp_dir() . '/embeddedio_discussions_cache.json';
+// Cache settings (seconds)
+$CACHE_TTL   = 300; // 5 minutes
+$cache_file  = sys_get_temp_dir() . '/embeddedio_discussions_cache.json';
 
-// serve cached response if fresh
+// Serve cached response if still valid
 if (file_exists($cache_file) && (time() - filemtime($cache_file) < $CACHE_TTL)) {
-    // send cached content (already JSON)
     echo file_get_contents($cache_file);
     exit;
 }
 
-// require token (you set it on server). If you prefer public-no-token, remove this check.
+// Require token (if private / rate-limit sensitive)
+// Nếu muốn public, có thể bỏ check này
 if (empty($TOKEN_GITHUB)) {
     http_response_code(500);
     echo json_encode(['error' => 'Server configuration error: GITHUB_EMBEDDEDIO_TOKEN not set.']);
     exit;
 }
 
-// GraphQL query
+// --- GraphQL query: lấy 5 discussions + comments ---
 $query = <<<'GRAPHQL'
 {
   repository(owner: "%OWNER%", name: "%REPO%") {
     discussions(first: 5, orderBy: {field: CREATED_AT, direction: DESC}) {
       nodes {
+        id
         title
         url
         createdAt
         author {
           login
           avatarUrl
+          url
+        }
+        comments {
+          totalCount
+          nodes(first: 2) {
+            bodyText
+            createdAt
+            author {
+              login
+              avatarUrl
+              url
+            }
+          }
         }
       }
     }
@@ -49,9 +63,9 @@ $query = <<<'GRAPHQL'
 }
 GRAPHQL;
 
-$query = str_replace(['%OWNER%','%REPO%'], [$GITHUB_OWNER, $GITHUB_REPO], $query);
+$query = str_replace(['%OWNER%', '%REPO%'], [$GITHUB_OWNER, $GITHUB_REPO], $query);
 
-// cURL to GitHub GraphQL
+// --- cURL call to GitHub GraphQL ---
 $ch = curl_init('https://api.github.com/graphql');
 curl_setopt_array($ch, [
     CURLOPT_RETURNTRANSFER => true,
@@ -66,17 +80,17 @@ curl_setopt_array($ch, [
 ]);
 
 $response = curl_exec($ch);
-$curlErr = curl_error($ch);
+$curlErr  = curl_error($ch);
 $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);
 
+// --- Error handling ---
 if ($response === false || $curlErr) {
     http_response_code(502);
     echo json_encode(['error' => 'cURL error: ' . $curlErr]);
     exit;
 }
 
-// decode to check for GraphQL errors
 $decoded = json_decode($response, true);
 if (json_last_error() !== JSON_ERROR_NONE) {
     http_response_code(502);
@@ -90,11 +104,11 @@ if (isset($decoded['errors'])) {
     exit;
 }
 
-// store raw JSON response to cache file (silently ignore write errors)
+// --- Cache raw JSON response (ignore write errors) ---
 @file_put_contents($cache_file, $response);
 
-// set browser cache header (optional)
+// Optional: set browser cache
 header('Cache-Control: public, max-age=' . $CACHE_TTL);
 
-// output GitHub response (raw JSON)
+// --- Output GitHub response ---
 echo $response;
