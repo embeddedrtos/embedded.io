@@ -1,105 +1,130 @@
 <?php
-// get-discussions.php
 header('Content-Type: application/json; charset=utf-8');
 
 // --- CONFIG ---
 $GITHUB_OWNER = "embeddedrtos";
 $GITHUB_REPO  = "embedded.io";
-
-// lấy token từ env
 $TOKEN_GITHUB = getenv('GITHUB_EMBEDDEDIO_TOKEN');
+
 if (!$TOKEN_GITHUB) {
     http_response_code(500);
     echo json_encode(["error" => "Server configuration error: GITHUB_EMBEDDEDIO_TOKEN not set."]);
     exit;
 }
 
+// --- INPUT PARAMS ---
+$type = $_GET['type'] ?? "graphql"; // default = graphql
+$queryParam = $_GET['q'] ?? "";
+
 // --- CACHE ---
 $CACHE_TTL  = 300; // 5 phút
-$cache_file = sys_get_temp_dir() . "/embeddedio_discussions_cache.json";
+$cache_file = sys_get_temp_dir() . "/embeddedio_discussions_cache_" . $type . ".json";
 
-// dùng cache nếu hợp lệ
 if (file_exists($cache_file) && (time() - filemtime($cache_file) < $CACHE_TTL)) {
     echo file_get_contents($cache_file);
     exit;
 }
 
-// --- GraphQL query ---
-$query = <<<GRAPHQL
-{
-  repository(owner: "$GITHUB_OWNER", name: "$GITHUB_REPO") {
-    discussions(first: 5, orderBy: {field: CREATED_AT, direction: DESC}) {
-      nodes {
-        id
-        title
-        url
-        createdAt
-        author {
-          login
-          avatarUrl
-          url
+// --- FUNCTION CALLER ---
+function callGithub($url, $method = "GET", $body = null, $token = null) {
+    $ch = curl_init($url);
+    $headers = [
+        "User-Agent: embedded.io",
+        "Authorization: Bearer $token",
+        "Accept: application/vnd.github+json"
+    ];
+    if ($method === "POST") {
+        curl_setopt($ch, CURLOPT_POST, true);
+        if ($body) {
+            $headers[] = "Content-Type: application/json";
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $body);
         }
-        comments(first: 2) {
+    }
+    curl_setopt_array($ch, [
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_TIMEOUT => 15,
+        CURLOPT_HTTPHEADER => $headers,
+    ]);
+    $response = curl_exec($ch);
+    $err = curl_error($ch);
+    curl_close($ch);
+
+    if ($err) {
+        http_response_code(502);
+        return json_encode(["error" => "cURL error: $err"]);
+    }
+    return $response;
+}
+
+// --- SWITCH BETWEEN MODES ---
+if ($type === "rest") {
+    // REST API: danh sách discussions cơ bản
+    $url = "https://api.github.com/repos/$GITHUB_OWNER/$GITHUB_REPO/discussions?per_page=10";
+    $response = callGithub($url, "GET", null, $TOKEN_GITHUB);
+
+} elseif ($type === "search") {
+    // SEARCH API: tìm kiếm discussions
+    if (!$queryParam) {
+        echo json_encode(["error" => "Missing search query ?q=keyword"]);
+        exit;
+    }
+    $url = "https://api.github.com/search/issues?q=repo:$GITHUB_OWNER/$GITHUB_REPO+is:discussion+$queryParam";
+    $response = callGithub($url, "GET", null, $TOKEN_GITHUB);
+
+} else {
+    // GRAPHQL API: lấy đầy đủ fields
+    $gql = <<<GRAPHQL
+    {
+      repository(owner: "$GITHUB_OWNER", name: "$GITHUB_REPO") {
+        discussions(first: 10, orderBy: {field: CREATED_AT, direction: DESC}) {
           totalCount
           nodes {
-            bodyText
+            id
+            number
+            title
+            body
+            bodyHTML
+            url
             createdAt
-            author {
-              login
-              avatarUrl
-              url
+            updatedAt
+            state
+            locked
+            answer { id body author { login url avatarUrl } }
+            author { login avatarUrl url }
+            category { id name description slug }
+            labels(first: 10) { nodes { name color description } }
+            reactions(first: 20) { totalCount nodes { content user { login avatarUrl url } } }
+            comments(first: 20) {
+              totalCount
+              nodes {
+                id
+                body
+                bodyHTML
+                createdAt
+                updatedAt
+                author { login avatarUrl url }
+                replies(first: 10) {
+                  totalCount
+                  nodes { bodyHTML createdAt author { login avatarUrl url } }
+                }
+                reactions(first: 10) { totalCount nodes { content user { login } } }
+              }
             }
           }
         }
       }
     }
-  }
+    GRAPHQL;
+
+    $response = callGithub("https://api.github.com/graphql", "POST", json_encode(["query" => $gql]), $TOKEN_GITHUB);
 }
-GRAPHQL;
 
-// --- cURL request ---
-$ch = curl_init("https://api.github.com/graphql");
-curl_setopt_array($ch, [
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_POST => true,
-    CURLOPT_TIMEOUT => 10,
-    CURLOPT_HTTPHEADER => [
-        "Content-Type: application/json",
-        "User-Agent: embedded.io",
-        "Authorization: Bearer $TOKEN_GITHUB"
-    ],
-    CURLOPT_POSTFIELDS => json_encode(["query" => $query]),
-]);
-
-$response = curl_exec($ch);
-$curlErr  = curl_error($ch);
-curl_close($ch);
-
-// --- Error handling ---
-if ($response === false || $curlErr) {
+// --- Cache & Output ---
+if ($response) {
+    @file_put_contents($cache_file, $response);
+    header("Cache-Control: public, max-age=$CACHE_TTL");
+    echo $response;
+} else {
     http_response_code(502);
-    echo json_encode(["error" => "cURL error: " . $curlErr]);
-    exit;
+    echo json_encode(["error" => "Empty response from GitHub API"]);
 }
-
-$decoded = json_decode($response, true);
-if (json_last_error() !== JSON_ERROR_NONE) {
-    http_response_code(502);
-    echo json_encode(["error" => "Invalid JSON from GitHub", "raw" => $response]);
-    exit;
-}
-
-if (isset($decoded["errors"])) {
-    http_response_code(502);
-    echo json_encode(["error" => "GitHub API returned errors", "details" => $decoded["errors"]]);
-    exit;
-}
-
-// --- Cache kết quả ---
-@file_put_contents($cache_file, $response);
-
-// cho phép trình duyệt cache
-header("Cache-Control: public, max-age=$CACHE_TTL");
-
-// --- Xuất JSON ra frontend ---
-echo $response;
