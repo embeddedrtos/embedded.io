@@ -1,0 +1,4 @@
+<Files "get-discussions.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
