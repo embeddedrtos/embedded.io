@@ -489,7 +489,7 @@ if ($type === 'graphql') {
     $gql = <<<GRAPHQL
 {
   repository(owner: "%s", name: "%s") {
-    discussions(first: 10{$afterPart}, orderBy: {field: CREATED_AT, direction: DESC}) {
+    discussions(first: 10{$afterPart}, orderBy: {field: UPDATED_AT, direction: DESC}) {
       totalCount
       pageInfo { hasNextPage endCursor }
       nodes {
