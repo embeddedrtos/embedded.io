@@ -494,6 +494,7 @@ if ($type === 'graphql') {
       pageInfo { hasNextPage endCursor }
       nodes {
         id
+        databaseId
         number
         title
         body
@@ -504,18 +505,37 @@ if ($type === 'graphql') {
         locked
         author { login avatarUrl url }
         category { id name description slug }
-        labels(first: 10) { nodes { id name color description } }
-        reactions(first: 20) { totalCount nodes { content user { login avatarUrl url } } }
+        labels(first: 10) { 
+          nodes { id name color description } 
+        }
+        reactions(first: 20) { 
+          totalCount 
+          nodes { content user { login avatarUrl url } } 
+        }
         comments(first: 20) {
           totalCount
           nodes {
-            id body bodyHTML createdAt updatedAt
+            id
+            databaseId
+            body
+            bodyHTML
+            createdAt
+            updatedAt
             author { login avatarUrl url }
             replies(first: 5) {
               totalCount
-              nodes { id databaseId bodyHTML createdAt author { login avatarUrl url } }
+              nodes { 
+                id 
+                databaseId
+                bodyHTML 
+                createdAt 
+                author { login avatarUrl url } 
+              }
             }
-            reactions(first: 10) { totalCount nodes { content user { login } } }
+            reactions(first: 10) { 
+              totalCount 
+              nodes { content user { login } } 
+            }
           }
         }
       }
