@@ -513,7 +513,7 @@ if ($type === 'graphql') {
             author { login avatarUrl url }
             replies(first: 5) {
               totalCount
-              nodes { id bodyHTML createdAt author { login avatarUrl url } }
+              nodes { id databaseId bodyHTML createdAt author { login avatarUrl url } }
             }
             reactions(first: 10) { totalCount nodes { content user { login } } }
           }
