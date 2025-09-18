@@ -50,13 +50,13 @@ for post in data.get("data", []):
         post["category"] = category
 
     # Debug print
-    print("📝 Message:", message if message else "No content")
-    print("📅 Date:", post["created_time"])
-    print("🔗 Link:", post["permalink_url"])
-    print("🖼 Image:", post.get("full_picture", "No image"))
+    #print("📝 Message:", message if message else "No content")
+    #print("📅 Date:", post["created_time"])
+    #print("🔗 Link:", post["permalink_url"])
+    #print("🖼 Image:", post.get("full_picture", "No image"))
     if "category" in post:
         print("🏷 Category:", post["category"])
-    print("-----")
+    #print("-----")
 
     # Check hashtags in message
     if "#news" in message.lower():

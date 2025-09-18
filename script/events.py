@@ -43,7 +43,7 @@ def post_to_json(post_text):
         else:
             data[key] = None
 
-    # ✅ Apply default rules
+    # Apply default rules
     if not data["logo"]:
         data["logo"] = None
     if not data["members"]:
@@ -68,7 +68,7 @@ def insert_event(json_file, event_data):
     # Check duplicate by title
     existing_titles = {e.get("title") for e in events}
     if event_data["title"] in existing_titles:
-        print(f"⚠️ Skipped: Event '{event_data['title']}' already exists.")
+        #print(f"Skipped: Event '{event_data['title']}' already exists.")
         return
 
     events.insert(0, event_data)
@@ -76,7 +76,7 @@ def insert_event(json_file, event_data):
     with open(json_file, "w", encoding="utf-8") as f:
         json.dump(events, f, indent=2, ensure_ascii=False)
 
-    print(f"👉 Inserted new event: {event_data['title']}")
+    #print(f"Inserted new event: {event_data['title']}")
 
 
 def fetch_facebook_posts():
@@ -98,7 +98,7 @@ if __name__ == "__main__":
 
         # Only process posts that have hashtag #events
         if "#events" in message.lower():
-            print("✅ Found event post, parsing...")
+            #print("Found event post, parsing...")
 
             event_json = post_to_json(message)
             insert_event("categories/events.json", event_json)

@@ -97,4 +97,4 @@ if facebook_posts:
     with open("categories/facebook_posts.json", "w", encoding="utf-8") as f:
         json.dump(facebook_posts, f, ensure_ascii=False, indent=2)
 
-print(f"✅ Saved {len(facebook_posts)} posts to categories/facebook_posts.json")
+print(f"Saved {len(facebook_posts)} posts to categories/facebook_posts.json")

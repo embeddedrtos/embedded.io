@@ -55,7 +55,7 @@ for blog in blogs:
     # Update blogs.json
     blog["views"] = new_total
 
-    print(f"{blog_slug}: today +{views_today}, total {new_total}")
+    # print(f"{blog_slug}: today +{views_today}, total {new_total}")
 
 with open(blogs_file, "w", encoding="utf-8") as f:
     json.dump(blogs, f, ensure_ascii=False, indent=2)
@@ -63,4 +63,4 @@ with open(blogs_file, "w", encoding="utf-8") as f:
 with open(blog_views_file, "w", encoding="utf-8") as f:
     json.dump(views_save, f, ensure_ascii=False, indent=2)
 
-print("✅ Updated BLOG_VIEWS and blogs.json successfully")
+print("Updated BLOG_VIEWS and blogs.json successfully")

@@ -29,7 +29,7 @@ for author in authors:
         if role_id in role_map:
             author["roles"] = role_map[role_id]
         else:
-            print(f"⚠️ Warning: Role id '{role_id}' not found in roles_and_badges.json")
+            #print(f"Warning: Role id '{role_id}' not found in roles_and_badges.json")
 
     # Replace badges
     if "badges" in author and author["badges"]:
@@ -38,11 +38,11 @@ for author in authors:
             if b_id in badge_map:
                 new_badges.append(badge_map[b_id])
             else:
-                print(f"⚠️ Warning: Badge id '{b_id}' not found in roles_and_badges.json")
+                #print(f"Warning: Badge id '{b_id}' not found in roles_and_badges.json")
         author["badges"] = new_badges
 
 # === Save back to file ===
 with authors_file.open("w", encoding="utf-8") as f:
     json.dump(authors, f, ensure_ascii=False, indent=2)
 
-print("✅ authors/authors.json updated successfully!")
+print("authors/authors.json updated successfully!")
