@@ -1,4 +1,4 @@
-name: Validate Author JSON
+name: Validate JSON Data
 
 on:
   push:
@@ -9,21 +9,24 @@ on:
       - main
 
 jobs:
-  validate-author:
-    name: Validate Author Data
+  validate:
+    name: Validate JSON Files
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📥 Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: ⚙️ Setup Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: 📦 Install dependencies
+      - name: Install dependencies
         run: npm install
 
-      - name: ✅ Run JSON Schema Validation
+      - name: Validate Author JSON
         run: npm run validate:author
+
+      - name: Validate Recruitment JSON
+        run: npm run validate:recruitment

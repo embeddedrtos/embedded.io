@@ -16,14 +16,14 @@ jobs:
 
       - name: Display current directory and files
         run: |
-          echo "📁 Current directory: $PWD"
-          echo "📂 List of files:"
+          echo "Current directory: $PWD"
+          echo "List of files:"
           ls -la
 
       - name: Determine deploy path and create directory
         run: |
           DEPLOY_PATH="/home/$USER/public_html/embeddedio"
-          echo "📁 Deploy path: $DEPLOY_PATH"
+          echo "Deploy path: $DEPLOY_PATH"
           mkdir -p "$DEPLOY_PATH"
 
       - name: Run Python Script to Fetch Posts
@@ -35,6 +35,7 @@ jobs:
           python3 script/blogs.py
           python3 script/blog_views.py
           python3 script/events.py
+          python3 script/recuitments.py
           deactivate
 
       - name: Sync project files into deploy directory
@@ -49,8 +50,8 @@ jobs:
     steps:
       - name: Cleanup runner work & logs
         run: |
-          echo "🧹 Cleaning runner work..."
+          echo "Cleaning runner work..."
           rm -rf $HOME/actions-runner/_work/* || true
-          echo "🧹 Cleaning old logs..."
+          echo "Cleaning old logs..."
           find $HOME/actions-runner/_diag -type f -mtime +1 -delete || true
-          echo "✅ Done"
+          echo "Done"

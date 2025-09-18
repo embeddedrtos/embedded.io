@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Recruitments Schema",
+  "description": "Schema for validating recruitment/job postings data.",
+  "type": "array",
+  "items": {
+    "$ref": "#/$defs/recruitment"
+  },
+  "$defs": {
+    "recruitment": {
+      "type": "object",
+      "required": ["id", "company", "title", "level", "location", "apply"],
+      "properties": {
+        "id": { "type": "string" },
+        "created_time": { "type": "string", "format": "date-time" },
+        "published_at": { "type": "string", "format": "date-time" },
+        "full_picture": { "type": ["string", "null"], "format": "uri" },
+        "status": { "type": "string", "enum": ["open", "closed"] },
+        "company": {
+          "type": "object",
+          "required": ["name"],
+          "properties": {
+            "name": { "type": "string" },
+            "about": { "type": "string" },
+            "industry": { "type": "string" },
+            "size": { "type": "string" },
+            "logo": { "type": ["string", "null"], "format": "uri" }
+          }
+        },
+        "title": { "type": "string" },
+        "level": { "type": "string" },
+        "location": {
+          "type": "object",
+          "required": ["type", "city"],
+          "properties": {
+            "type": { "type": "string", "enum": ["Onsite", "Hybrid", "Remote"] },
+            "address": { "type": "string" },
+            "city": { "type": "string" }
+          }
+        },
+        "salary": {
+          "oneOf": [
+            { "type": "string" },
+            {
+              "type": "object",
+              "properties": {
+                "min": { "type": "number" },
+                "max": { "type": "number" },
+                "currency": { "type": "string" },
+                "note": { "type": "string" }
+              }
+            }
+          ]
+        },
+        "description": { "type": "string" },
+        "responsibilities": { "type": "array", "items": { "type": "string" } },
+        "requirements": {
+          "oneOf": [
+            { "type": "array", "items": { "type": "string" } },
+            {
+              "type": "object",
+              "properties": {
+                "education": { "type": "string" },
+                "experience": { "type": "string" },
+                "hard_skills": { "type": "array", "items": { "type": "string" } },
+                "soft_skills": { "type": "array", "items": { "type": "string" } },
+                "preferred": { "type": "array", "items": { "type": "string" } }
+              }
+            }
+          ]
+        },
+        "benefits": { "type": "array", "items": { "type": "string" } },
+        "work_time": { "type": "string" },
+        "apply_deadline": { "type": "string" },
+        "process": { "type": "array", "items": { "type": "string" } },
+        "apply": {
+          "type": "object",
+          "required": ["email", "contact_person"],
+          "properties": {
+            "email": { "type": "string", "format": "email" },
+            "contact_person": { "type": "string" }
+          }
+        },
+        "tags": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}
