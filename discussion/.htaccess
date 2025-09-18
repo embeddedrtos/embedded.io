@@ -1,7 +1,0 @@
-<Files "get-discussions.php">
-    Order Deny,Allow
-    Deny from all
-    Allow from env=ALLOW_SITE
-</Files>
-
-SetEnvIf Referer "^https://embedded\.io\.vn" ALLOW_SITE
