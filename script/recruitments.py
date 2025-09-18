@@ -1,24 +1,41 @@
 import re
 import json
+import os
+import requests
+from pathlib import Path
 
-# Bước 1: Regex để loại bỏ emoji/icon unicode
+ACCESS_TOKEN = 'EAAYs9LWVhnQBPHaagFDt6E8we9RZAZBBIZCAwqClW2x37STpXo1mUCADKFzHFkgI3VZBGlEaddpIXfaieDm2vtToQ4Os3Bo3UvMVeKPPZAeNIbqtZCAyEMQyVFWynAvWkB0Cu7QdfokLoMCUd5aZAvWQJ9HOkDZAoiRQxuFsXYEjQ9SPcaytKlxz0K6bGmP8QZAvxNqv3rAzoqdZBKQKWfg9sZD' 
+PAGE_ID = '108431818921623'
+
+url = f'https://graph.facebook.com/v23.0/{PAGE_ID}/posts'
+params = {
+    'fields': 'id,message,created_time,full_picture',
+    'access_token': ACCESS_TOKEN
+}
+
+# Regex to remove emojis (non-ASCII characters)
 EMOJI_PATTERN = re.compile(r"[^\x00-\x7F]+", flags=re.UNICODE)
 
 def remove_emojis(text: str) -> str:
-    """Xóa tất cả icon/emojis trong chuỗi"""
+    """Remove emojis/icons from text"""
     return EMOJI_PATTERN.sub(r'', text)
 
-# Bước 2: Parse message thành JSON
-def parse_job_post(text: str):
-    clean_text = remove_emojis(text)
-    job = {}
+def parse_job_post(post: dict):
+    """Parse a recruitment post into structured JSON"""
+    clean_text = remove_emojis(post.get("message", ""))
+
+    job = {
+        "id": post.get("id"),
+        "created_time": post.get("created_time"),
+        "full_picture": post.get("full_picture")
+    }
 
     # Company
     match = re.search(r"Company:\s*(.+)", clean_text)
     if match:
         job["company"] = {"name": match.group(1).strip()}
 
-    # Position
+    # Title
     match = re.search(r"Position:\s*(.+)", clean_text)
     if match:
         job["title"] = match.group(1).strip()
@@ -28,7 +45,7 @@ def parse_job_post(text: str):
     if match:
         job["level"] = match.group(1).strip()
 
-    # Location (Type, Address, City)
+    # Location
     loc_match = re.search(r"Location:(.+?)Salary:", clean_text, re.S)
     if loc_match:
         loc_block = loc_match.group(1)
@@ -41,7 +58,7 @@ def parse_job_post(text: str):
             "city": loc_city.group(1).strip() if loc_city else ""
         }
 
-    # Salary (giữ nguyên text)
+    # Salary
     match = re.search(r"Salary:\s*(.+)", clean_text)
     if match:
         job["salary"] = match.group(1).strip()
@@ -66,37 +83,42 @@ def parse_job_post(text: str):
         job["apply_deadline"] = match.group(1).strip()
 
     # Apply
-    match = re.search(r"Apply:\s*(.+)", clean_text)
-    if match:
-        job["apply"] = match.group(1).strip()
+    apply = {}
+    email_match = re.search(r"Email:\s*([^\n\r]+)", clean_text)
+    if email_match:
+        apply["email"] = email_match.group(1).strip()
+    contact_match = re.search(r"Contact:\s*([^\n\r]+)", clean_text)
+    if contact_match:
+        apply["contact_person"] = contact_match.group(1).strip()
+    if apply:
+        job["apply"] = apply
 
     return job
 
-
 if __name__ == "__main__":
-    post_text = """
-    🏢 Company: ABCDEF Tech  
-    💼 Position: Embedded Software Engineer (CA55/RTOS)  
-    📊 Level: Mid  
-    📍 Location:  
-        - Type: Onsite  
-        - Address: Tòa nhà XYZ, Quận 1  
-        - City: Ho Chi Minh 
-    💰 Salary: 15–30M VND (negotiable)  
+    response = requests.get(url, params=params)
+    posts = response.json().get("data", [])
 
-    🛠️ Requirements:  
-    - 💻 C/C++  
-    - ⚡ FreeRTOS/Zephyr  
-    - 🔌 UART/SPI/I2C  
+    json_path = Path("categories/recruitments.json")
 
-    🎁 Benefits:  
-    - 💵 Competitive salary  
-    - 🩺 Social & Health Insurance  
-    - 📈 Performance review every 6 months  
+    # Load existing JSON
+    if json_path.exists():
+        with open(json_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    else:
+        data = []
 
-    ⏳ Deadline: 30/09/2025  
-    📧 Apply: hr@abctech.vn (Nguyen Van A – HR)  
-    """
+    # Process only posts containing #recruitment
+    for post in posts:
+        message = post.get("message", "")
+        
+        if "#recruitment" in message.lower():
+            job_json = parse_job_post(post)
+            data.insert(0, job_json)
+            print(f"Added job: {job_json['title']}")
 
-    job_json = parse_job_post(post_text)
-    print(json.dumps(job_json, ensure_ascii=False, indent=2))
+    # Save back to file
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+    print("Recruitment data updated in categories/recruitments.json")
