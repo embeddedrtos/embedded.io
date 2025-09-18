@@ -114,8 +114,12 @@ if __name__ == "__main__":
         
         if "#recruitment" in message.lower():
             job_json = parse_job_post(post)
-            data.insert(0, job_json)
-            print(f"Added job: {job_json['title']}")
+            # Check if ID already exists
+            if not any(j.get("id") == job_json["id"] for j in data):
+                data.insert(0, job_json)
+                print(f"Added job: {job_json['title']}")
+            else:
+                print(f"Skipped duplicate job ID: {job_json['id']}")
 
     # Save back to file
     with open(json_path, "w", encoding="utf-8") as f:
