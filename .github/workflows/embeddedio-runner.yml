@@ -36,6 +36,7 @@ jobs:
           python3 script/blog_views.py
           python3 script/events.py
           python3 script/recruitments.py
+          python3 script/companies.py
           deactivate
 
       - name: Sync project files into deploy directory
