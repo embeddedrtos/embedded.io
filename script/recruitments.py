@@ -40,6 +40,11 @@ def parse_job_post(post: dict):
     if match:
         job["title"] = match.group(1).strip()
 
+    # Description
+    match = re.search(r"Description:\s*(.+)", clean_text)
+    if match:
+        job["description"] = match.group(1).strip()
+
     # Level
     match = re.search(r"Level:\s*(.+)", clean_text)
     if match:

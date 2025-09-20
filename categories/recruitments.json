@@ -1,36 +1,5 @@
 [
   {
-    "id": "108431818921623_691863773918783",
-    "created_time": "2025-09-18T17:03:41+0000",
-    "full_picture": "https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/549323633_691850743920086_7803116191001384084_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=h3GuVsdwy1QQ7kNvwGhIrIO&_nc_oc=AdmxNEXHu8SCFraGheJXIAz5rKGKXl4uwfrLYhDcxy38CyW0hW_bPTfO_PIEgTTzFlw&_nc_zt=23&_nc_ht=scontent.fsgn2-6.fna&edm=AKIiGfEEAAAA&_nc_gid=J7bKVAa63Rd-3RiOzNMfBA&oh=00_AfYoZkVUMGzEyOAHMucyscCWd-xcB_wZ_uPE8-aToXUUGg&oe=68D21FFF",
-    "company": {
-      "name": "ABCDEF Tech"
-    },
-    "title": "Embedded Software Engineer (CA55/RTOS)",
-    "level": "Mid",
-    "location": {
-      "type": "Onsite",
-      "address": "Block XYZ",
-      "city": "Ho Chi Minh"
-    },
-    "salary": "15-30M VND (negotiable)",
-    "requirements": [
-      "C/C++",
-      "FreeRTOS/Zephyr",
-      "UART/SPI/I2C"
-    ],
-    "benefits": [
-      "Competitive salary",
-      "Social & Health Insurance",
-      "Performance review every 6 months"
-    ],
-    "apply_deadline": "30/09/2025",
-    "apply": {
-      "email": "hr@abctech.vn",
-      "contact_person": "Nguyen Van A (HR)"
-    }
-  },
-  {
     "id": "REC001",
     "company": {
       "name": "Công ty ABCDEF Tech",
