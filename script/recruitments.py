@@ -98,6 +98,13 @@ def parse_job_post(post: dict):
     if apply:
         job["apply"] = apply
 
+    # Tags
+    tag_match = re.search(r"Tags:(.+?)Apply:", clean_text, re.S)
+    if tag_match:
+        tags = [line.strip("- ").strip()
+                for line in tag_match.group(1).strip().splitlines() if line.strip()]
+        job["tags"] = tags
+
     return job
 
 if __name__ == "__main__":
