@@ -68,6 +68,11 @@ def parse_job_post(post: dict):
     if match:
         job["salary"] = match.group(1).strip()
 
+    # Work Time
+    match = re.search(r"Work Time:\s*(.+)", clean_text)
+    if match:
+        job["work_time"] = match.group(1).strip()
+
     # Requirements
     req_match = re.search(r"Requirements:(.+?)Benefits:", clean_text, re.S)
     if req_match:
