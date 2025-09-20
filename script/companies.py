@@ -1,7 +1,7 @@
 import json
 
 # Path to the JSON file
-file_path = "categories/company.json"
+file_path = "categories/companies.json"
 
 # Read JSON data
 with open(file_path, "r", encoding="utf-8") as f:
