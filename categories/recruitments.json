@@ -1,0 +1,224 @@
+[
+  {
+    "id": "REC001",
+    "company": {
+      "name": "Công ty ABCDEF Tech",
+      "about": "Startup phát triển giải pháp IoT và embedded systems",
+      "industry": "Embedded / IoT",
+      "size": "50-200",
+      "logo": null
+    },
+    "title": "Kỹ sư Phần mềm Embedded (CA55/RTOS)",
+    "level": "Mid",
+    "location": {
+      "type": "Onsite",
+      "address": "Tòa nhà XYZ, Quận 1",
+      "city": "Ho Chi Minh"
+    },
+    "salary": {
+      "min": 15000000,
+      "max": 30000000,
+      "currency": "VND",
+      "note": "Thoả thuận theo năng lực"
+    },
+    "description": "Phát triển firmware cho hệ thống nhúng, làm việc với RTOS và giao tiếp phần cứng.",
+    "responsibilities": [
+      "Phát triển, bảo trì firmware cho MCU/MPU",
+      "Viết driver phần cứng và tích hợp giao thức giao tiếp",
+      "Hợp tác với team HW để debug board",
+      "Viết unit test và tài liệu kỹ thuật"
+    ],
+    "requirements": {
+      "education": "Cao đẳng/Đại học chuyên ngành CNTT/Điện tử",
+      "experience": "2+ năm làm việc với embedded firmware",
+      "hard_skills": [
+        "C/C++",
+        "GDB, J-Link, build system (Make/CMake)",
+        "RTOS (FreeRTOS/Zephyr)",
+        "UART, SPI, I2C"
+      ],
+      "soft_skills": [
+        "Làm việc nhóm",
+        "Kỹ năng giải quyết vấn đề"
+      ],
+      "preferred": [
+        "Kinh nghiệm với Yocto",
+        "Hiểu biết về CI/CD"
+      ]
+    },
+    "benefits": [
+      "Mức lương cạnh tranh",
+      "Tham gia BHXH, BHYT",
+      "Chính sách thưởng và review 6 tháng",
+      "Đào tạo chuyên môn"
+    ],
+    "work_time": "9:00-18:00 (Thứ 2-6)",
+    "apply_deadline": "2025-09-30",
+    "process": [
+      "Nộp CV",
+      "Technical test (nếu có)",
+      "Phỏng vấn kỹ thuật",
+      "Offer"
+    ],
+    "apply": {
+      "email": "hr@abctech.vn",
+      "contact_person": "Nguyễn Văn A (HR)"
+    },
+    "tags": [
+      "embedded",
+      "firmware",
+      "RTOS"
+    ],
+    "created_time": "2025-09-07T10:00:00+07:00",
+    "full_picture": null,
+    "status": "open"
+  },
+  {
+    "id": "REC002",
+    "created_time": "2025-09-07T10:00:00+07:00",
+    "full_picture": null,
+    "company": {
+      "name": "DEFERT Automotive",
+      "about": "Công ty chuyên phát triển phần mềm nhúng cho ngành ô tô",
+      "industry": "Automotive / Embedded",
+      "size": "200-500",
+      "logo": null
+    },
+    "title": "Embedded Software Engineer (Autosar/RTOS)",
+    "level": "Senior",
+    "location": {
+      "type": "Hybrid",
+      "address": "Tòa nhà ABC, Quận Bình Thạnh",
+      "city": "Ho Chi Minh"
+    },
+    "salary": {
+      "min": 25000000,
+      "max": 40000000,
+      "currency": "VND",
+      "note": "Thưởng theo dự án"
+    },
+    "description": "Phát triển phần mềm cho ECU ô tô theo chuẩn Autosar, RTOS.",
+    "responsibilities": [
+      "Phát triển software component cho Autosar",
+      "Tích hợp RTOS và middleware",
+      "Hỗ trợ kiểm thử trên HIL/SIL",
+      "Review code và mentor cho junior"
+    ],
+    "requirements": {
+      "education": "Đại học chuyên ngành CNTT/Điện - Điện tử",
+      "experience": "3+ năm trong lĩnh vực automotive embedded",
+      "hard_skills": [
+        "C/C++",
+        "Autosar Classic/Adaptive",
+        "RTOS",
+        "CAN, LIN, UDS"
+      ],
+      "soft_skills": [
+        "Kỹ năng giao tiếp",
+        "Khả năng làm việc độc lập"
+      ],
+      "preferred": [
+        "Kinh nghiệm MISRA C",
+        "Hiểu về ASPICE"
+      ]
+    },
+    "benefits": [
+      "Lương + thưởng dự án hấp dẫn",
+      "BHXH, BHYT, Bảo hiểm tai nạn",
+      "Đào tạo Autosar chuyên sâu",
+      "Cơ hội onsite Nhật/Đức"
+    ],
+    "work_time": "8:30-17:30 (Thứ 2-6)",
+    "apply_deadline": "2025-10-15",
+    "process": [
+      "Nộp CV",
+      "Phỏng vấn kỹ thuật",
+      "Phỏng vấn HR",
+      "Offer"
+    ],
+    "apply": {
+      "email": "career@defauto.com",
+      "contact_person": "Trần Thị B (Talent Acquisition)"
+    },
+    "tags": [
+      "Autosar",
+      "RTOS",
+      "C++"
+    ],
+    "published_at": "2025-09-08T09:00:00+07:00",
+    "status": "open"
+  },
+  {
+    "id": "REC003",
+    "created_time": "2025-09-07T10:00:00+07:00",
+    "full_picture": null,
+    "company": {
+      "name": "IoT WWWWW Solutions VN",
+      "about": "Cung cấp giải pháp IoT cho nông nghiệp và smart home",
+      "industry": "IoT / Smart Devices",
+      "size": "20-50",
+      "logo": null
+    },
+    "title": "IoT Firmware Developer (FreeRTOS/MQTT)",
+    "level": "Junior",
+    "location": {
+      "type": "Remote",
+      "address": "Làm việc từ xa",
+      "city": "Anywhere in Vietnam"
+    },
+    "salary": {
+      "min": 12000000,
+      "max": 18000000,
+      "currency": "VND",
+      "note": "Có bonus theo KPI"
+    },
+    "description": "Phát triển firmware cho thiết bị IoT, kết nối cloud qua MQTT/CoAP.",
+    "responsibilities": [
+      "Viết firmware cho ESP32/STM32",
+      "Tích hợp FreeRTOS, MQTT",
+      "Kết nối và gửi dữ liệu lên cloud",
+      "Hỗ trợ khách hàng debug"
+    ],
+    "requirements": {
+      "education": "Cao đẳng/Đại học CNTT/Điện tử",
+      "experience": "1+ năm lập trình embedded",
+      "hard_skills": [
+        "C/C++",
+        "FreeRTOS",
+        "MQTT/CoAP",
+        "Wi-Fi, BLE"
+      ],
+      "soft_skills": [
+        "Ham học hỏi",
+        "Tinh thần trách nhiệm"
+      ],
+      "preferred": [
+        "Có kinh nghiệm ESP-IDF",
+        "Hiểu biết về AWS IoT"
+      ]
+    },
+    "benefits": [
+      "Làm việc remote linh hoạt",
+      "Thưởng KPI theo quý",
+      "Học hỏi từ team IoT senior",
+      "Laptop công ty cung cấp"
+    ],
+    "work_time": "Flexible (40h/tuần)",
+    "apply_deadline": "2025-10-05",
+    "process": [
+      "Nộp CV",
+      "Phỏng vấn kỹ thuật online",
+      "Offer"
+    ],
+    "apply": {
+      "email": "hr@iotsolutions.vn",
+      "contact_person": "Ngô Văn C (HR Manager)"
+    },
+    "tags": [
+      "IoT",
+      "FreeRTOS",
+      "MQTT"
+    ],
+    "status": "open"
+  }
+]

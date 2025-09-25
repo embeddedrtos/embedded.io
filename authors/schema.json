@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Authors Schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^[ACUR].*$"
+      },
+      "name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "bio": {
+        "type": "string",
+        "minLength": 1
+      },
+      "avatar": {
+        "type": ["string", "null"],
+        "format": "uri-reference",
+        "default": "/wp-content/uploads/2025/08/default-avatar.jpg"
+      },
+      "job_title": {
+        "type": ["string", "null"]
+      },
+      "company": {
+        "type": ["string", "null"]
+      },
+      "email": {
+        "type": ["string", "null"],
+        "format": "email"
+      },
+      "roles": {
+        "type": ["string", "null"],
+        "enum": [
+          "admin",
+          "moderator",
+          "mentor",
+          "contributor",
+          "member",
+          "newbie",
+          "project_leader",
+          "tester",
+          null
+        ]
+      },
+      "badges": {
+        "type": ["array", "null"],
+        "items": {
+          "type": "string",
+          "enum": [
+            "top_contributor",
+            "helper",
+            "reviewer",
+            "bug_hunter",
+            "rtos_master",
+            "mcu_guru",
+            "linux_embedded",
+            "debugger_pro",
+            "hardware_maker",
+            "security_specialist",
+            "hackathon_winner",
+            "open_source_contributor",
+            "community_builder"
+          ]
+        }
+      },
+      "socials": {
+        "type": "object",
+        "properties": {
+          "github":   { "type": ["string", "null"], "format": "uri" },
+          "facebook": { "type": ["string", "null"], "format": "uri" },
+          "youtube":  { "type": ["string", "null"], "format": "uri" },
+          "linkedin": { "type": ["string", "null"], "format": "uri" },
+          "twitter":  { "type": ["string", "null"], "format": "uri" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "required": ["id", "name", "bio"],
+    "additionalProperties": false
+  },
+  "uniqueItemProperties": ["id"]
+}

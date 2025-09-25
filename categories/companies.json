@@ -1,0 +1,346 @@
+[
+  {
+    "id": "COMOB01",
+    "name_company": "ABOV Semiconductor",
+    "location": [
+      "TP.Hà Nội"
+    ],
+    "logo": "https://www.nexty-ele.com/uploads/media_files/ABOV_CI_color-5235340157.png",
+    "jobs": [
+      "https://www.abov.co.kr/en/main.php"
+    ],
+    "country": "Korea"
+  },
+  {
+    "id": "COMOB02",
+    "name_company": "Ampere",
+    "location": [
+      "TP.Hồ Chí Minh"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Ampere_Computing_LLC_Logo.svg",
+    "jobs": [
+      "https://careers.amperecomputing.com/"
+    ],
+    "country": "USA"
+  },
+  {
+    "id": "COMOB03",
+    "name_company": "BOS Semiconductor",
+    "location": [
+      "TP.Hồ Chí Minh"
+    ],
+    "logo": "https://static.ybox.vn/2023/5/3/1685528669106-luong-cao-lam-avatar.png",
+    "jobs": [
+      "https://bossemiconductors.jobday.vn/"
+    ],
+    "country": "Korea"
+  },
+  {
+    "id": "COMOB04",
+    "name_company": "Bosch",
+    "location": [
+      "TP.Hà Nội",
+      "TP.Hồ Chí Minh"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Bosch-logo.svg/1280px-Bosch-logo.svg.png",
+    "jobs": [
+      "https://careers.smartrecruiters.com/BoschGroup/vietnam"
+    ],
+    "country": "Germany"
+  },
+  {
+    "id": "COMVN01",
+    "name_company": "Banvien",
+    "location": [
+      "TP.Hồ Chí Minh"
+    ],
+    "logo": "https://hr1tech.com/htdocs/images/owners/hr1tech/logo/202111/259639989-3093900267521339-4519839391643750665-n.png",
+    "jobs": [
+      "https://career.banvien.com.vn/"
+    ],
+    "country": "Vietnam"
+  },
+  {
+    "id": "COMVN02",
+    "name_company": "Connexus",
+    "location": [
+      "TP.Hồ Chí Minh"
+    ],
+    "logo": "https://connexus-group.co.uk/sites/default/files/2021-05/Connexus%20Logo.jpg",
+    "jobs": [
+      "https://connexus.vn/category/careers/"
+    ],
+    "country": "Vietnam"
+  },
+  {
+    "id": "COMOB05",
+    "name_company": "Faraday",
+    "location": [
+      "TP.Hồ Chí Minh"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Faraday_Technology_logo_20080804.jpg",
+    "jobs": [
+      "https://www.faraday-tech.com/en/content/Careers/RecruitingVietnam"
+    ],
+    "country": "Taiwan"
+  },
+  {
+    "id": "COMOB06",
+    "name_company": "HCL",
+    "location": [
+      "TP.Hồ Chí Minh"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/8/8a/HCL_Technologies_logo.svg",
+    "jobs": [
+      "https://www.hcltech.com/careers"
+    ],
+    "country": "India"
+  },
+  {
+    "id": "COMVN03",
+    "name_company": "FPT",
+    "location": [
+      "TP.Hà Nội",
+      "TP.Hồ Chí Minh"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/1/11/FPT_logo_2010.svg",
+    "jobs": [
+      "https://fptjobs.com/tuyen-dung"
+    ],
+    "country": "Vietnam"
+  },
+  {
+    "id": "COMOB07",
+    "name_company": "Hitachi",
+    "location": [
+      "TP.Hà Nội",
+      "TP.Hồ Chí Minh"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Hitachi_inspire_the_next-Logo.svg",
+    "jobs": [
+      "https://careers.hitachi.com/search/jobs/in/country/vietnamJapan"
+    ],
+    "country": "Japan"
+  },
+  {
+    "id": "COMOB08",
+    "name_company": "Infineon",
+    "location": [
+      "TP.Hà Nội",
+      "TP.Hồ Chí Minh"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Infineon-Logo.svg",
+    "jobs": [
+      "https://jobs.infineon.com/careers"
+    ],
+    "country": "Germany"
+  },
+  {
+    "id": "COMOB09",
+    "name_company": "Intel",
+    "location": [
+      "TP.Hồ Chí Minh"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Intel_logo_%282006-2020%29.svg",
+    "jobs": [
+      "https://jobs.intel.com/"
+    ],
+    "country": "USA"
+  },
+  {
+    "id": "COMOB10",
+    "name_company": "LG",
+    "location": [
+      "TP.Hà Nội"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/8/8d/LG_logo_%282014%29.svg",
+    "jobs": [
+      "https://globalcareers.lge.com/locations/VN"
+    ],
+    "country": "Korea"
+  },
+  {
+    "id": "COMOB11",
+    "name_company": "Marvell",
+    "location": [
+      "TP.Hồ Chí Minh"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/8/83/Marvell_Logo.svg",
+    "jobs": [
+      "https://marvell.wd1.myworkdayjobs.com/MarvellCareers"
+    ],
+    "country": "USA"
+  },
+  {
+    "id": "COMOB12",
+    "name_company": "Microchip",
+    "location": [
+      "TP.Hồ Chí Minh"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Microchip-Logo.svg",
+    "jobs": [
+      "https://www.microchip.com/en-us/about/careers"
+    ],
+    "country": "USA"
+  },
+  {
+    "id": "COMOB13",
+    "name_company": "Qorvo",
+    "location": [
+      "TP.Hà Nội"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/8/85/Qorvo_logo_black.png",
+    "jobs": [
+      "https://careers.qorvo.com/"
+    ],
+    "country": "USA"
+  },
+  {
+    "id": "COMOB14",
+    "name_company": "Quest Global",
+    "location": [
+      "TP.Hồ Chí Minh"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Quest-Global-Logo.png",
+    "jobs": [
+      "https://careers.quest-global.com/global/en"
+    ],
+    "country": "India"
+  },
+  {
+    "id": "COMOB15",
+    "name_company": "Realtek",
+    "location": [
+      "TP.Hồ Chí Minh"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/vi/7/70/Realtek_logo_vector.svg",
+    "jobs": [
+      "https://recruit.realtek.com/"
+    ],
+    "country": "Taiwan"
+  },
+  {
+    "id": "COMOB16",
+    "name_company": "Renesas",
+    "location": [
+      "TP.Hồ Chí Minh"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Renesas_Electronics_logo.svg",
+    "jobs": [
+      "https://jobs.renesas.com/"
+    ],
+    "country": "Japan"
+  },
+  {
+    "id": "COMOB17",
+    "name_company": "Samsung",
+    "location": [
+      "TP.Hà Nội",
+      "TP.Hồ Chí Minh"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg",
+    "jobs": [
+      "https://www.samsungcareers.com.vn/#/jobs-list"
+    ],
+    "country": "Korea"
+  },
+  {
+    "id": "COMOB18",
+    "name_company": "SEMIFIVE",
+    "location": [
+      "TP.Hồ Chí Minh"
+    ],
+    "logo": "https://semifive.com/wp-content/uploads/2022/03/SEMIFIVE_logo.png",
+    "jobs": [
+      "https://semifive.com/company/careers/open-roles/"
+    ],
+    "country": "Korea"
+  },
+  {
+    "id": "COMOB19",
+    "name_company": "SkyEchip",
+    "location": [
+      "TP.Hồ Chí Minh"
+    ],
+    "logo": "https://skyechip.com/wp-content/uploads/2021/03/Skyechip-Logo.png",
+    "jobs": [
+      "https://skyechip.com/career-opportunities/"
+    ],
+    "country": "Malaysia"
+  },
+  {
+    "id": "COMOB20",
+    "name_company": "Synopsys",
+    "location": [
+      "TP.Hà Nội",
+      "TP.Hồ Chí Minh"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Synopsys_Logo.svg",
+    "jobs": [
+      "https://careers.synopsys.com/"
+    ],
+    "country": "USA"
+  },
+  {
+    "id": "COMVN04",
+    "name_company": "TMA Solutions",
+    "location": [
+      "TP.Hồ Chí Minh"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/f/f9/TMA-Solutions-Logo.png",
+    "jobs": [
+      "https://www.tma.vn/tuyen-dung"
+    ],
+    "country": "Vietnam"
+  },
+  {
+    "id": "COMVN05",
+    "name_company": "Viettel",
+    "location": [
+      "TP.Hà Nội",
+      "TP.Hồ Chí Minh"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Viettel_logo_2021.svg",
+    "jobs": [
+      "https://tuyendung.viettel.vn/recruitment-information/search"
+    ],
+    "country": "Vietnam"
+  },
+  {
+    "id": "COMOB21",
+    "name_company": "Toshiba",
+    "location": [
+      "TP.Hà Nội"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/0/01/Toshiba_logo.svg",
+    "jobs": [
+      "https://www.toshiba-tsdv.com/career/jobs-opportunities/"
+    ],
+    "country": "Japan"
+  },
+  {
+    "id": "COMVN06",
+    "name_company": "Vinfast",
+    "location": [
+      "TP.Hà Nội",
+      "TP.Hồ Chí Minh"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/2/29/Logo_of_VinFast_%283D%29.svg",
+    "jobs": [
+      "https://www.linkedin.com/company/vinfast/"
+    ],
+    "country": "Vietnam"
+  },
+  {
+    "id": "COMOB22",
+    "name_company": "Uniquify",
+    "location": [
+      "TP.Hồ Chí Minh"
+    ],
+    "logo": "https://image.semiconductor.samsung.com/image/samsung/p6/semiconductor/newsroom/event/2022sff/partners/v2/partner-uniquify2-logo.png?$ORIGIN_PNG$",
+    "jobs": [
+      "https://www.uniquify.com/"
+    ],
+    "country": "Taiwan"
+  }
+]

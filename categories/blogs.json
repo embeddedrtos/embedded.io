@@ -1,0 +1,26 @@
+[
+  {
+    "id": "BL1",
+    "title": "Documentation Standard",
+    "slug": "documentation-standard",
+    "date": "2025-08-23",
+    "tags": ["documentation", "api", "guide"],
+    "category": "Driver",
+    "author_id": "A001",
+    "excerpt": "Hướng dẫn viết tài liệu chuẩn mực cho API với ví dụ minh họa và code mẫu.",
+    "thumbnail": "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "content": "# Documentation Standard\n\n> **Note**  \n> Much of the information in the API Reference section is available from within the e² studio tool via the [Developer Assistance](https://example.com/developer-assistance) feature.  \n> The information here can be referenced for additional details on API features.\n\n---\n\n## Key Points\n\n- **Bold text** dùng để nhấn mạnh  \n- *Italic text* dùng để làm nổi bật nhẹ  \n- [Link tham khảo](https://example.com) để dẫn người đọc đến nguồn ngoài  \n\n---\n\n## Example Code\n\n```c\n#include <stdio.h>\n\nint main() {\n    printf(\"Hello, Zephyr RTOS!\\n\");\n    return 0;\n}\n```"
+  },
+  {
+    "id": "BL6",
+    "title": "Vì Sao Không Nên Học Arduino Khi Theo Đuổi Ngành Nhúng?",
+    "slug": "vi-sao-khong-nen-hoc-arduino-khi-theo-duoi-nganh-nhung",
+    "date": "2025-09-10",
+    "tags": ["arduino", "embedded", "mcu", "rtos"],
+    "category": "MCU",
+    "author_id": "A001",
+    "excerpt": "Arduino rất phù hợp cho người mới bắt đầu, nhưng nếu muốn theo đuổi sự nghiệp nhúng chuyên nghiệp thì không nên dừng lại ở Arduino.",
+    "thumbnail": "https://scontent.fsgn2-3.fna.fbcdn.net/v/t39.30808-6/487120199_557580724013756_613251995514804348_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=pNaPsrj2cywQ7kNvwFCDbbX&_nc_oc=AdkrpVf-qWulw2qp9yRxeWpK55hotJoPghkEqr-dmBEqd6JXm7Q69E5nVsiZg5VrRu4&_nc_zt=23&_nc_ht=scontent.fsgn2-3.fna&_nc_gid=o1T0qj7Hzl0uQFWVLuWcUQ&oh=00_AfZedLpKDq26WjB1UW7wDOVVBPpSnLWzDoF9qtKxC8e55Q&oe=68DB30ED",
+    "content": "# Vì Sao Không Nên Học Arduino Khi Theo Đuổi Ngành Nhúng?\n\nArduino là một công cụ tuyệt vời để bắt đầu với lập trình nhúng, nhưng nếu bạn muốn theo đuổi sự nghiệp chuyên nghiệp trong lĩnh vực này, bạn cần cân nhắc kỹ. Dưới đây là một số lý do tại sao Arduino không phải là lựa chọn tối ưu cho dân nhúng chuyên nghiệp.\n\n---\n\n## Mục lục\n1. [Quá đơn giản, không phản ánh thực tế ngành](#1-quá-đơn-giản-không-phản-ánh-thực-tế-ngành)  \n2. [Không tiếp xúc sâu với phần cứng](#2-không-tiếp-xúc-sâu-với-phần-cứng)  \n3. [Không phù hợp cho các hệ thống nhúng phức tạp](#3-không-phù-hợp-cho-các-hệ-thống-nhúng-phức-tạp)  \n4. [Hạn chế trong tối ưu hiệu năng](#4-hạn-chế-trong-tối-ưu-hiệu-năng)  \n5. [Arduino phù hợp với ai?](#arduino-phù-hợp-với-ai)  \n6. [Nên học gì thay thế?](#nên-học-gì-thay-thế)  \n7. [Ghi chú](#ghi-chú)  \n\n---\n\n## 1. Quá đơn giản, không phản ánh thực tế ngành\nArduino che giấu nhiều chi tiết quan trọng của lập trình nhúng. Bạn chỉ cần gọi vài hàm như `digitalWrite()` hay `analogRead()` là có thể điều khiển phần cứng, nhưng thực tế làm nhúng không đơn giản như vậy.\n\n---\n\n## 2. Không tiếp xúc sâu với phần cứng\nArduino sử dụng thư viện có sẵn, khiến bạn ít khi phải làm việc với **thanh ghi (register)** hay các giao thức giao tiếp phần cứng ở mức thấp như **SPI, I2C, UART**. Trong khi đó, kỹ sư nhúng chuyên nghiệp cần hiểu rõ những thứ này.\n\n---\n\n## 3. Không phù hợp cho các hệ thống nhúng phức tạp\nArduino chủ yếu chạy trên vi điều khiển **8-bit hoặc 32-bit đơn giản** (như *ATmega328P* hay *STM32F103C8*). Trong thực tế, bạn sẽ làm việc với các vi điều khiển mạnh hơn, chạy **RTOS** hoặc thậm chí là **Linux nhúng**.\n\n---\n\n## 4. Hạn chế trong tối ưu hiệu năng\nLập trình nhúng yêu cầu **tối ưu hóa bộ nhớ, tốc độ thực thi, và mức tiêu thụ năng lượng**. Arduino không dạy bạn cách tối ưu vì nó được thiết kế để dễ sử dụng, không phải để tối ưu hiệu suất.\n\n---\n\n## Arduino phù hợp với ai?\nArduino chỉ phù hợp với:\n- Học sinh phổ thông muốn làm quen với lập trình và điện tử  \n- Các dự án đơn giản như bật/tắt đèn LED, đo nhiệt độ, điều khiển động cơ nhỏ  \n\nNếu bạn muốn theo đuổi ngành nhúng chuyên nghiệp, hãy tìm hiểu những nền tảng mạnh hơn.\n\n---\n\n## Nên học gì thay thế?\nNếu bạn nghiêm túc với ngành nhúng, hãy tập trung vào:\n\n- Lập trình **C/C++ cho vi điều khiển**  \n- Làm việc trực tiếp với **thanh ghi của vi điều khiển** (STM32, ESP32, NXP, Renesas...)  \n- Hiểu rõ các giao thức như **I2C, SPI, UART**  \n- Nắm vững **RTOS** như *FreeRTOS, Zephyr*  \n- Học cách **debug** với *J-Link, Ozone, GDB*  \n\n---\n\n## Ghi chú\nArduino **không phải là \"không tốt\" hay vô ích**. Đây là một công cụ tuyệt vời để làm quen với lập trình nhúng, nhưng **nếu mục tiêu của bạn là sự nghiệp chuyên nghiệp trong ngành**, thì cần đi xa hơn Arduino và nắm chắc nền tảng vi điều khiển, RTOS và kỹ năng debug ở mức thấp.\n"
+  }
+]

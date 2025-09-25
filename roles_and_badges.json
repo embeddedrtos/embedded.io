@@ -1,0 +1,139 @@
+{
+  "roles": [
+    {
+      "id": "admin",
+      "name": "Admin",
+      "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/shield.svg",
+      "description": "Manages the community, sets direction, and ensures smooth operations."
+    },
+    {
+      "id": "moderator",
+      "name": "Moderator",
+      "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/gavel.svg",
+      "description": "Supports admins by moderating content and maintaining community rules."
+    },
+    {
+      "id": "mentor",
+      "name": "Mentor",
+      "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/book-open.svg",
+      "description": "Guides and shares expertise with other members to help them grow."
+    },
+    {
+      "id": "contributor",
+      "name": "Contributor",
+      "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/edit.svg",
+      "description": "Actively creates posts, tutorials, or discussions for the community."
+    },
+    {
+      "id": "member",
+      "name": "Member",
+      "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/user.svg",
+      "description": "Regular participant who reads, comments, and engages with content."
+    },
+    {
+      "id": "newbie",
+      "name": "Newbie",
+      "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/leaf.svg",
+      "description": "New to the community, learning and starting to contribute."
+    },
+    {
+      "id": "project_leader",
+      "name": "Project Leader",
+      "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/rocket.svg",
+      "description": "Leads group projects, organizes collaboration, and drives results."
+    },
+    {
+      "id": "tester",
+      "name": "Tester",
+      "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/flask-conical.svg",
+      "description": "Tests and validates contributions, ensuring quality and reliability."
+    }
+  ],
+
+  "badges": {
+    "contribution": [
+      {
+        "id": "top_contributor",
+        "name": "Top Contributor",
+        "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/star.svg",
+        "description": "Recognized for consistently making valuable contributions."
+      },
+      {
+        "id": "helper",
+        "name": "Helper",
+        "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/handshake.svg",
+        "description": "Acknowledged for frequently helping other members."
+      },
+      {
+        "id": "reviewer",
+        "name": "Reviewer",
+        "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/search-check.svg",
+        "description": "Earned by reviewing and providing feedback on others' work."
+      },
+      {
+        "id": "bug_hunter",
+        "name": "Bug Hunter",
+        "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/bug.svg",
+        "description": "Given to those who identify and report bugs effectively."
+      }
+    ],
+    "expertise": [
+      {
+        "id": "rtos_master",
+        "name": "RTOS Master",
+        "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/timer.svg",
+        "description": "Expert in real-time operating systems and scheduling."
+      },
+      {
+        "id": "mcu_guru",
+        "name": "MCU Guru",
+        "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/cpu.svg",
+        "description": "Highly skilled in microcontroller programming and design."
+      },
+      {
+        "id": "linux_embedded",
+        "name": "Linux Embedded Hacker",
+        "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/terminal.svg",
+        "description": "Specialist in embedded Linux systems and custom builds."
+      },
+      {
+        "id": "debugger_pro",
+        "name": "Debugger Pro",
+        "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/crosshair.svg",
+        "description": "Master at debugging and solving complex system issues."
+      },
+      {
+        "id": "hardware_maker",
+        "name": "Hardware Maker",
+        "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/circuit-board.svg",
+        "description": "Recognized for designing and building hardware solutions."
+      },
+      {
+        "id": "security_specialist",
+        "name": "Security Specialist",
+        "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/shield-check.svg",
+        "description": "Expert in securing embedded systems against threats."
+      }
+    ],
+    "special": [
+      {
+        "id": "hackathon_winner",
+        "name": "Hackathon Winner",
+        "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/trophy.svg",
+        "description": "Awarded to winners of hackathons or coding competitions."
+      },
+      {
+        "id": "open_source_contributor",
+        "name": "Open Source Contributor",
+        "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/globe.svg",
+        "description": "Acknowledged for contributing to open-source projects."
+      },
+      {
+        "id": "community_builder",
+        "name": "Community Builder",
+        "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/users.svg",
+        "description": "Recognized for fostering collaboration and building community spirit."
+      }
+    ]
+  }
+}

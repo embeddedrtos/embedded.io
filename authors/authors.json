@@ -1,0 +1,20 @@
+[
+  {
+    "id": "A001",
+    "name": "Pham Van Nhat",
+    "bio": "Hi there, I'm Nhat, an embedded systems engineer passionate about IoT, real-time systems, and AI integration.",
+    "avatar": "https://avatars.githubusercontent.com/u/156271796?v=4",
+    "job_title": "Embedded Software Engineer",
+    "company": "Ho Chi Minh City University of Technology",
+    "email": "embeddedrtos.vietnam@gmail.com",
+    "roles": "admin",
+    "badges": ["top_contributor", "open_source_contributor"],
+    "socials": {
+      "github": "https://github.com/embeddedrtos",
+      "facebook": "https://www.facebook.com/emrtosVN",
+      "youtube": null,
+      "linkedin": null,
+      "twitter": null
+    }
+  }
+]

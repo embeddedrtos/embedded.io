@@ -1,0 +1,58 @@
+name: embeddedio
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test-runner:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Display current directory and files
+        run: |
+          echo "Current directory: $PWD"
+          echo "List of files:"
+          ls -la
+
+      - name: Determine deploy path and create directory
+        run: |
+          DEPLOY_PATH="/home/$USER/public_html/embeddedio"
+          echo "Deploy path: $DEPLOY_PATH"
+          mkdir -p "$DEPLOY_PATH"
+
+      - name: Run Python Script to Fetch Posts
+        run: |
+          source /home/$USER/virtualenv/script/3.11/bin/activate
+          python3 script/roles_and_badges.py
+          python3 script/news.py
+          python3 script/facebook_posts.py
+          python3 script/blogs.py
+          python3 script/blog_views.py
+          python3 script/events.py
+          python3 script/recruitments.py
+          python3 script/companies.py
+          deactivate
+
+      - name: Sync project files into deploy directory
+        run: |
+          DEPLOY_PATH="/home/$USER/public_html/embeddedio"
+          rsync -av --exclude='.git' ./ "$DEPLOY_PATH"/ --delete
+
+  cleanup:
+    runs-on: self-hosted
+    needs: test-runner
+    if: always()
+    steps:
+      - name: Cleanup runner work & logs
+        run: |
+          echo "Cleaning runner work..."
+          rm -rf $HOME/actions-runner/_work/* || true
+          echo "Cleaning old logs..."
+          find $HOME/actions-runner/_diag -type f -mtime +1 -delete || true
+          echo "Done"

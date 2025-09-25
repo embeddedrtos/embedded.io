@@ -1,0 +1,52 @@
+[
+  {
+    "date": "Tue, 27 - Wed, 28 May 2025",
+    "title": "16th AUTOSAR Open Conference",
+    "location": "Bruges, Belgium",
+    "categories": ["AUTOSAR", "Automotive Embedded", "Software‑Defined Vehicle"],
+    "members": null,
+    "logo": null,
+    "background": "linear-gradient(135deg, #A1C4FD, #C2E9FB)",
+    "url": "https://www.autosar.org/news-events/detail?cHash=e8216ef66607047e1192f5caf9aa7167"
+  },
+  {
+    "date": "Tue, 11 - Thu, 13 Mar 2025",
+    "title": "Embedded World 2025",
+    "location": "Nuremberg, Germany",
+    "categories": ["Embedded Systems", "Arm", "Linux", "MCU", "IoT", "Edge AI"],
+    "members": null,
+    "logo": null,
+    "background": "linear-gradient(45deg, #FDEB71, #F8D800)",
+    "url": "https://www.arm.com/company/events?utm_campaign=mk32-2_apac-taiwan_na_2023_na_na_na"
+  },
+  {
+    "date": "Mon, 4 - Tue, 5 Jun 2025",
+    "title": "AutoTech 2025 (with AUTOSAR)",
+    "location": "Novi, Michigan, USA",
+    "categories": ["AUTOSAR", "Automotive Embedded", "MCU", "Factory Automation"],
+    "members": null,
+    "logo": null,
+    "background": "linear-gradient(120deg, #FFDEE9, #B5FFFC)",
+    "url": "https://www.autosar.org/news-events/"
+  },
+  {
+    "date": "Mon, 7 - Thu, 10 Jan 2025",
+    "title": "CES 2025",
+    "location": "Las Vegas, USA",
+    "categories": ["Embedded Systems", "ARM", "IoT", "MCU", "Microsoft"],
+    "members": null,
+    "logo": null,
+    "background": "linear-gradient(60deg, #FFF1EB, #ACE0F9)",
+    "url": "https://www.arm.com/company/events"
+  },
+  {
+    "date": "Summer‑Autumn 2025",
+    "title": "Arm Developer Workshop & Tech Symposia",
+    "location": "Global (Shanghai, Tokyo, Shenzhen…)",
+    "categories": ["ARM", "MCU", "Linux", "Embedded Development", "AI"],
+    "members": null,
+    "logo": null,
+    "background": "linear-gradient(45deg, #C6FFDD, #FBD786, #f7797d)",
+    "url": "https://www.arm.com/events"
+  }
+]

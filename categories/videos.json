@@ -1,0 +1,122 @@
+[
+  {
+    "video_id": "pzcllub7kuU",
+    "title": "Chương 1: Hướng dẫn cài đặt môi trường Zephyr",
+    "description": "Trong video này bạn sẽ học cách cài đặt môi trường Zephyr RTOS...",
+    "channel_title": "Zephyr RTOS Việt Nam",
+    "published_at": "2025-07-25T14:00:00Z",
+    "tags": ["Zephyr", "RTOS", "Driver"],
+    "duration": "PT12M45S",
+    "thumbnail_url": "https://img.youtube.com/vi/pzcllub7kuU/hqdefault.jpg"
+  },
+  {
+    "video_id": "mTJ_vKlMS_4",
+    "title": "Introduction to Zephyr Part 1: Getting Started – Installation and ...",
+    "description": "Welcome to our 12-part video series exploring the Zephyr Project, a powerful open-source real-time operating system (RTOS)...",
+    "channel_title": "Electronics Series",
+    "published_at": null,
+    "tags": ["Zephyr", "RTOS", "Embedded"],
+    "duration": null,
+    "thumbnail_url": "https://img.youtube.com/vi/mTJ_vKlMS_4/hqdefault.jpg"
+  },
+  {
+    "video_id": "jR5E5Kz9A-k",
+    "title": "Introduction to the Zephyr RTOS",
+    "description": "A comprehensive introduction to the Zephyr Real Time Operating System (RTOS)...",
+    "channel_title": "Embedded Tutorials",
+    "published_at": null,
+    "tags": ["Zephyr", "RTOS", "Intro"],
+    "duration": null,
+    "thumbnail_url": "https://img.youtube.com/vi/jR5E5Kz9A-k/hqdefault.jpg"
+  },
+  {
+    "video_id": "_wGK9_dUjJg",
+    "title": "Zephyr as a secure Choice for Embedded MCU Development",
+    "description": "Discussing why Zephyr RTOS is a secure choice for embedded MCU development...",
+    "channel_title": "Secure Embedded",
+    "published_at": null,
+    "tags": ["Zephyr", "Embedded", "Security"],
+    "duration": null,
+    "thumbnail_url": "https://img.youtube.com/vi/_wGK9_dUjJg/hqdefault.jpg"
+  },
+  {
+    "video_id": "n1NRV0SjnQE",
+    "title": "Using Zephyr for Embedded Controllers",
+    "description": "Talk on Zephyr RTOS for connected resource-constrained embedded controllers...",
+    "channel_title": "Embedded Talks",
+    "published_at": null,
+    "tags": ["Zephyr", "Embedded", "Controllers"],
+    "duration": null,
+    "thumbnail_url": "https://img.youtube.com/vi/n1NRV0SjnQE/hqdefault.jpg"
+  },
+  {
+    "video_id": "hArOFZlov9c",
+    "title": "How to use FreeRTOS with STM32 Microcontroller–Example",
+    "description": "Learn how to create and delete tasks, handle scheduler and task priorities with FreeRTOS on STM32...",
+    "channel_title": "MCU Examples",
+    "published_at": null,
+    "tags": ["FreeRTOS", "STM32", "Embedded"],
+    "duration": null,
+    "thumbnail_url": "https://img.youtube.com/vi/hArOFZlov9c/hqdefault.jpg"
+  },
+  {
+    "video_id": "3Kevk3l6vPs",
+    "title": "STM32 Tutorial #27 - DIVING into FreeRTOS",
+    "description": "Deep dive into FreeRTOS on STM32 MCU using CMSIS RTOS/V2 abstraction layer...",
+    "channel_title": "STM32 Tutorials",
+    "published_at": null,
+    "tags": ["FreeRTOS", "STM32", "Embedded"],
+    "duration": null,
+    "thumbnail_url": "https://img.youtube.com/vi/3Kevk3l6vPs/hqdefault.jpg"
+  },
+  {
+    "video_id": "PcE-2VjtYF4",
+    "title": "FreeRTOS With Arduino Tutorials 1 - Setting Up FreeRTOS on ...",
+    "description": "Guide to setting up FreeRTOS on Arduino platform, with sensors and libraries...",
+    "channel_title": "Arduino Learning",
+    "published_at": null,
+    "tags": ["FreeRTOS", "Arduino", "Embedded"],
+    "duration": null,
+    "thumbnail_url": "https://img.youtube.com/vi/PcE-2VjtYF4/hqdefault.jpg"
+  },
+  {
+    "video_id": "NxzjYpRI-Zc",
+    "title": "Next Level Embedded – Topic: FreeRTOS Deep Dive",
+    "description": "Deep dive into FreeRTOS concepts for embedded systems...",
+    "channel_title": "Next Level Embedded",
+    "published_at": null,
+    "tags": ["FreeRTOS", "Embedded", "Deep Dive"],
+    "duration": null,
+    "thumbnail_url": "https://img.youtube.com/vi/NxzjYpRI-Zc/hqdefault.jpg"
+  },
+  {
+    "video_id": "VgCALN3w0h0",
+    "title": "AWS re:Invent 2020: How to build connected microcontroller apps with free rtos",
+    "description": "Session on building connected MCU apps with FreeRTOS...",
+    "channel_title": "AWS events",
+    "published_at": null,
+    "tags": ["FreeRTOS", "AWS", "Embedded"],
+    "duration": null,
+    "thumbnail_url": "https://img.youtube.com/vi/VgCALN3w0h0/hqdefault.jpg"
+  },
+  {
+    "video_id": "Sow2E9N7SVE",
+    "title": "DevCon24 - Zephyr RTOS Versatile Development for ...",
+    "description": "Talk on using Zephyr RTOS in practical GNSS tracker example with LoRaWAN...",
+    "channel_title": "DevCon24",
+    "published_at": null,
+    "tags": ["Zephyr", "RTOS", "LoRaWAN"],
+    "duration": null,
+    "thumbnail_url": "https://img.youtube.com/vi/Sow2E9N7SVE/hqdefault.jpg"
+  },
+  {
+    "video_id": "v6kUPnKs4TU",
+    "title": "Going West: How We Develop and Maintain a Zephyr-based Microcontroller SDK",
+    "description": "Overview of developing and maintaining a Zephyr-based microcontroller SDK...",
+    "channel_title": "Nordic Semiconductor",
+    "published_at": null,
+    "tags": ["Zephyr", "SDK", "Embedded"],
+    "duration": null,
+    "thumbnail_url": "https://img.youtube.com/vi/v6kUPnKs4TU/hqdefault.jpg"
+  }
+]

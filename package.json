@@ -1,0 +1,12 @@
+{
+  "name": "validators",
+  "version": "1.0.0",
+  "description": "Validate JSON files with JSON Schema using ajv-cli",
+  "scripts": {
+    "validate:author": "ajv validate -s authors/schema.json -d authors/authors.json --strict=false --spec=draft2020",
+    "validate:recruitment": "ajv validate -s schema/recruitments_schema.json -d categories/recruitments.json --strict=false --spec=draft2020"
+  },
+  "devDependencies": {
+    "ajv-cli": "^5.0.0"
+  }
+}
