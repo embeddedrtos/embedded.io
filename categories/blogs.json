@@ -46,7 +46,7 @@
     "excerpt": "Tìm hiểu khái niệm hàm tương đương – nền tảng quan trọng trong Toán Cao Cấp và ứng dụng vào chuỗi Taylor, kỹ thuật điện.",
     "thumbnail": "https://scontent.fsgn2-11.fna.fbcdn.net/v/t39.30808-6/548626681_2713146602388392_2745308637670941721_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=FYa7oFqgCvQQ7kNvwFMBsc3&_nc_oc=AdnA7M7gUbJyS6RkChhHHLKlQIwRV4W5P1j0IyveqSNgKTY7HB1avh04Xf4y6UD1VMU&_nc_zt=23&_nc_ht=scontent.fsgn2-11.fna&_nc_gid=j1lt00rqG9ODB5apLjf5CA&oh=00_AffR9tgFUthTBmaP8VGcPFQbonsS6PBQ_i4dJ99Ui82MiQ&oe=68FA79D4",
     "content": "# 📘 Hàm Tương Đương\n\n### 🔹 Định nghĩa\nHai hàm **f(x)** và **g(x)** được gọi là **tương đương** khi $x \\to a$ nếu:\n\n$$\n\\frac{f(x)}{g(x)} \\to 1\n$$\n\nĐiều này có nghĩa là **gần điểm a**, hai hàm có **hành vi gần như giống nhau**. Nói cách khác, trong lân cận điểm đó, ta có thể thay thế một hàm bằng hàm còn lại để tính gần đúng.\n\n### 🔹 Ví dụ\nKhi $x \\to 0$:\n\n$$\n\\sin(x) \\sim x, \\qquad \\tan(x) \\sim x, \\qquad 1 - \\cos(x) \\sim \\frac{x^2}{2}\n$$\n\nĐây là các ví dụ cơ bản thường gặp trong Toán Cao Cấp.\n\n---\n\n### 🎥 Video tham khảo\n<iframe width=\"853\" height=\"480\" src=\"https://www.youtube.com/embed/dqi3vzfVQBg\" title=\"Toán Cao Cấp 1 - IUH - 2025 : Casio Tìm Hàm Số Tương Đương\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
-  }
+  },
   {
     "id": "BL6",
     "title": "Vì Sao Không Nên Học Arduino Khi Theo Đuổi Ngành Nhúng?",
