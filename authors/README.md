@@ -2,6 +2,7 @@
 
 This guide explains how to **add a new author** to `authors.json` following the required JSON Schema. Using the correct format ensures that your author information is **valid, consistent, and ready for automated validation**.
 
+
 ---
 
 ## 📂 Repository Structure
