@@ -4,65 +4,54 @@ import json
 import re
 
 ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN")
-PAGE_ID = os.environ.get("PAGE_ID")
+PAGE_ID      = os.environ.get("PAGE_ID")
 
-# Load authors.json
 with open("authors/authors.json", "r", encoding="utf-8") as f:
-    authors_data = json.load(f)
+    authors_dict = {a["id"]: a for a in json.load(f)}
 
-# Convert authors list to dict for quick lookup
-authors_dict = {author["id"]: author for author in authors_data}
+ID_PATTERN       = re.compile(r"#([A-Z]\d{3})", re.IGNORECASE)
+CATEGORY_PATTERN = re.compile(r"#CA([A-Za-z0-9_]+)", re.IGNORECASE)
 
-url = f'https://graph.facebook.com/v23.0/{PAGE_ID}/posts'
-params = {
-    'fields': 'id,message,created_time,permalink_url,full_picture',
-    'access_token': ACCESS_TOKEN
-}
 
-response = requests.get(url, params=params)
-data = response.json()
+def fetch_all_posts(page_id: str, token: str) -> list:
+    """Follow Facebook pagination — never drops old posts."""
+    url    = f"https://graph.facebook.com/v23.0/{page_id}/posts"
+    params = {
+        "fields":       "id,message,created_time,permalink_url,full_picture",
+        "access_token": token,
+    }
+    posts = []
+    while url:
+        resp = requests.get(url, params=params)
+        resp.raise_for_status()
+        payload = resp.json()
+        posts.extend(payload.get("data", []))
+        url    = payload.get("paging", {}).get("next")
+        params = {}
+    return posts
 
-# Lists to store posts by hashtag
+
+all_posts = fetch_all_posts(PAGE_ID, ACCESS_TOKEN)
+
 news_posts = []
-posts_posts = []
-
-# Regex patterns
-id_pattern = re.compile(r"#([A-Z]\d{3})", re.IGNORECASE)
-ca_category_pattern = re.compile(r"#CA([A-Za-z0-9_]+)", re.IGNORECASE)
-
-# Print results and classify by hashtag
-for post in data.get("data", []):
+for post in all_posts:
     message = post.get("message", "")
+    if "#news" not in message.lower():
+        continue
 
-    # Check author id pattern (#A001, #B123...)
-    author_info = None
-    match = id_pattern.search(message)
-    if match:
-        author_id = match.group(1).upper()
+    author_match = ID_PATTERN.search(message)
+    if author_match:
+        author_id = author_match.group(1).upper()
         if author_id in authors_dict:
-            author_info = authors_dict[author_id]
-            post["author"] = author_info
+            post["author"] = authors_dict[author_id]
 
-    # Check CA + CATEGORY
-    category_match = ca_category_pattern.search(message)
-    if category_match:
-        category = category_match.group(1)
-        post["category"] = category
+    cat_match = CATEGORY_PATTERN.search(message)
+    if cat_match:
+        post["category"] = cat_match.group(1)
 
-    # Debug print
-    #print("📝 Message:", message if message else "No content")
-    #print("📅 Date:", post["created_time"])
-    #print("🔗 Link:", post["permalink_url"])
-    #print("🖼 Image:", post.get("full_picture", "No image"))
-    if "category" in post:
-        print("🏷 Category:", post["category"])
-    #print("-----")
+    news_posts.append(post)
 
-    # Check hashtags in message
-    if "#news" in message.lower():
-        news_posts.append(post)
+with open("categories/news.json", "w", encoding="utf-8") as f:
+    json.dump(news_posts, f, ensure_ascii=False, indent=2)
 
-# Save posts containing #news
-if news_posts:
-    with open("categories/news.json", "w", encoding="utf-8") as f:
-        json.dump(news_posts, f, ensure_ascii=False, indent=2)
+print(f"[OK] news.json — {len(news_posts)} posts")

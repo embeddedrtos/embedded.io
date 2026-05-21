@@ -1,32 +1,52 @@
-name: embeddedio
+name: Validate and Deploy
 
 on:
   push:
     branches: [main]
   pull_request:
+    branches: [main]
 
 jobs:
-  test-runner:
-    runs-on: self-hosted
+  # ── Step 1: Validate JSON schemas (GitHub-hosted, fast) ─────────────────
+  validate:
+    name: Validate JSON
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository code
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Validate Author JSON
+        run: npm run validate:author
+
+      - name: Validate Recruitment JSON
+        run: npm run validate:recruitment
+
+  # ── Step 2: Deploy — only on push to main, always after validate ────────
+  deploy:
+    name: Deploy to Hosting
+    runs-on: self-hosted
+    needs: validate
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
-      - name: Display current directory and files
-        run: |
-          echo "Current directory: $PWD"
-          echo "List of files:"
-          ls -la
-
-      - name: Determine deploy path and create directory
+      - name: Prepare deploy directory
         run: |
           DEPLOY_PATH="/home/$USER/public_html/embeddedio"
-          echo "Deploy path: $DEPLOY_PATH"
           mkdir -p "$DEPLOY_PATH"
+          echo "DEPLOY_PATH=$DEPLOY_PATH" >> $GITHUB_ENV
 
-      - name: Run Python Script to Fetch Posts
+      - name: Run enrichment scripts
         run: |
           source /home/$USER/virtualenv/script/3.11/bin/activate
           python3 script/roles_and_badges.py
@@ -39,20 +59,19 @@ jobs:
           python3 script/companies.py
           deactivate
 
-      - name: Sync project files into deploy directory
+      - name: Sync to deploy directory
         run: |
-          DEPLOY_PATH="/home/$USER/public_html/embeddedio"
-          rsync -av --exclude='.git' ./ "$DEPLOY_PATH"/ --delete
+          rsync -av --exclude='.git' --exclude='script/' --exclude='.github/' \
+            ./ "$DEPLOY_PATH"/ --delete
 
+  # ── Step 3: Cleanup runner workspace ─────────────────────────────────────
   cleanup:
+    name: Cleanup Runner
     runs-on: self-hosted
-    needs: test-runner
+    needs: deploy
     if: always()
     steps:
-      - name: Cleanup runner work & logs
+      - name: Remove workspace and old logs
         run: |
-          echo "Cleaning runner work..."
-          rm -rf $HOME/actions-runner/_work/* || true
-          echo "Cleaning old logs..."
+          rm -rf "$GITHUB_WORKSPACE" || true
           find $HOME/actions-runner/_diag -type f -mtime +1 -delete || true
-          echo "Done"

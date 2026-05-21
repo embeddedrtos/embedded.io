@@ -4,97 +4,71 @@ import json
 import re
 
 ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN")
-PAGE_ID = os.environ.get("PAGE_ID")
+PAGE_ID      = os.environ.get("PAGE_ID")
 
-# Load authors.json
 with open("authors/authors.json", "r", encoding="utf-8") as f:
-    authors_data = json.load(f)
+    authors_dict = {a["id"]: a for a in json.load(f)}
 
-# Convert authors list to dict for quick lookup
-authors_dict = {author["id"]: author for author in authors_data}
+ID_PATTERN       = re.compile(r"#([A-Z]\d{3})", re.IGNORECASE)
+CATEGORY_PATTERN = re.compile(r"#CA([A-Za-z0-9_]+)", re.IGNORECASE)
+TITLE_PATTERN    = re.compile(r"Title:\s*(.+)", re.IGNORECASE)
 
-url = f'https://graph.facebook.com/v23.0/{PAGE_ID}/posts'
-params = {
-    'fields': 'id,message,created_time,permalink_url,full_picture',
-    'access_token': ACCESS_TOKEN
-}
 
-response = requests.get(url, params=params)
-data = response.json()
+def fetch_all_posts(page_id: str, token: str) -> list:
+    """Follow Facebook pagination — never drops old posts."""
+    url    = f"https://graph.facebook.com/v23.0/{page_id}/posts"
+    params = {
+        "fields":       "id,message,created_time,permalink_url,full_picture",
+        "access_token": token,
+    }
+    posts = []
+    while url:
+        resp = requests.get(url, params=params)
+        resp.raise_for_status()
+        payload = resp.json()
+        posts.extend(payload.get("data", []))
+        url    = payload.get("paging", {}).get("next")
+        params = {}
+    return posts
 
-# List to store posts containing #posts
-facebook_posts = []
 
-# Regex patterns
-id_pattern = re.compile(r"#([A-Z]\d{3})", re.IGNORECASE)   # Author ID (#A001, #B123...)
-ca_category_pattern = re.compile(r"#CA([A-Za-z0-9_]+)", re.IGNORECASE)  # Category hashtag
-title_pattern = re.compile(r"Title:\s*(.+)", re.IGNORECASE)
-description_pattern = re.compile(r"Description:\s*(.+)", re.IGNORECASE | re.DOTALL)
+def build_post(raw: dict, authors: dict) -> dict:
+    message = raw.get("message", "")
 
-# Process posts
-for post in data.get("data", []):
-    message = post.get("message", "")
+    title_match = TITLE_PATTERN.search(message)
+    title = title_match.group(1).strip() if title_match else message.split("\n")[0].strip()
 
-    # Skip if no message
-    if not message:
-        continue
-
-    # Default values
-    title = None
-    description = None
-
-    # Extract title
-    title_match = title_pattern.search(message)
-    if title_match:
-        title = title_match.group(1).strip()
-
-    # Extract description (can be multi-line)
-    description_match = description_pattern.search(message)
-    if description_match:
-        description = description_match.group(1).strip()
-
-    # If no title, fallback to first line of message
-    if not title:
-        title = message.split("\n")[0].strip()
-
-    # Check author ID
-    author_info = None
-    match = id_pattern.search(message)
-    if match:
-        author_id = match.group(1).upper()
-        if author_id in authors_dict:
-            author_info = authors_dict[author_id]
-            post["author"] = author_info
-
-    # Check category hashtag
-    category_match = ca_category_pattern.search(message)
-    if category_match:
-        category = category_match.group(1)
-        post["category"] = category
-
-    # Build clean post data
-    clean_post = {
-        "id": post["id"],
-        "title": title,
-        "description": description,
-        "created_time": post["created_time"],
-        "permalink_url": post["permalink_url"],
-        "full_picture": post.get("full_picture"),
+    post = {
+        "id":            raw["id"],
+        "title":         title,
+        "description":   None,
+        "created_time":  raw["created_time"],
+        "permalink_url": raw["permalink_url"],
+        "full_picture":  raw.get("full_picture"),
     }
 
-    if "author" in post:
-        clean_post["author"] = post["author"]
+    author_match = ID_PATTERN.search(message)
+    if author_match:
+        author_id = author_match.group(1).upper()
+        if author_id in authors:
+            post["author"] = authors[author_id]
 
-    if "category" in post:
-        clean_post["category"] = post["category"]
+    cat_match = CATEGORY_PATTERN.search(message)
+    if cat_match:
+        post["category"] = cat_match.group(1)
 
-    # Save only posts that contain #posts hashtag
-    if "#posts" in message.lower():
-        facebook_posts.append(clean_post)
+    return post
 
-# Save to JSON
-if facebook_posts:
-    with open("categories/facebook_posts.json", "w", encoding="utf-8") as f:
-        json.dump(facebook_posts, f, ensure_ascii=False, indent=2)
 
-print(f"Saved {len(facebook_posts)} posts to categories/facebook_posts.json")
+all_posts = fetch_all_posts(PAGE_ID, ACCESS_TOKEN)
+
+facebook_posts = [
+    build_post(p, authors_dict)
+    for p in all_posts
+    if "#posts" in p.get("message", "").lower()
+]
+
+with open("categories/facebook_posts.json", "w", encoding="utf-8") as f:
+    json.dump(facebook_posts, f, ensure_ascii=False, indent=2)
+
+print(f"[OK] facebook_posts.json — {len(facebook_posts)} posts")
