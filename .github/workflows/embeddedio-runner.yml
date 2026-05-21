@@ -44,8 +44,16 @@ jobs:
           echo "DEPLOY_PATH=$DEPLOY_PATH" >> $GITHUB_ENV
 
       - name: Run enrichment scripts
+        env:
+          ACCESS_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}
+          PAGE_ID:      ${{ secrets.FB_PAGE_ID }}
         run: |
-          source /home/$USER/virtualenv/script/3.11/bin/activate
+          VENV="/home/$USER/virtualenv/script/3.11/bin/activate"
+          if [ -f "$VENV" ]; then
+            source "$VENV"
+          else
+            python3 -m pip install --quiet requests 2>/dev/null || true
+          fi
           python3 script/roles_and_badges.py
           python3 script/news.py
           python3 script/facebook_posts.py
@@ -54,7 +62,6 @@ jobs:
           python3 script/events.py
           python3 script/recruitments.py
           python3 script/companies.py
-          deactivate
 
       - name: Sync to deploy directory
         run: |
