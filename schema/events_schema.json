@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Events Schema",
+  "description": "Schema for tech event entries.",
+  "type": "array",
+  "items": { "$ref": "#/$defs/event" },
+  "$defs": {
+    "event": {
+      "type": "object",
+      "required": ["id", "title", "date_start", "location", "categories", "url"],
+      "properties": {
+        "id":         { "type": "string", "pattern": "^EV[0-9A-Za-z_-]+$" },
+        "title":      { "type": "string", "minLength": 1 },
+        "date":       { "type": "string" },
+        "date_start": { "type": "string", "format": "date" },
+        "date_end":   { "type": "string", "format": "date" },
+        "location":   { "type": "string" },
+        "categories": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "background": { "type": "string" },
+        "description":{ "type": "string" },
+        "url":        { "type": "string", "format": "uri" }
+      }
+    }
+  }
+}

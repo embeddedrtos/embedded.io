@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "description": "Validate JSON files with JSON Schema using ajv-cli",
   "scripts": {
-    "validate:author": "ajv validate -s authors/schema.json -d authors/authors.json --strict=false --spec=draft2020",
-    "validate:recruitment": "ajv validate -s schema/recruitments_schema.json -d categories/recruitments.json --strict=false --spec=draft2020"
+    "validate:author":      "ajv validate -s authors/schema.json -d authors/authors.json --strict=false --spec=draft2020",
+    "validate:recruitment": "ajv validate -s schema/recruitments_schema.json -d categories/recruitments.json --strict=false --spec=draft2020",
+    "validate:blogs":       "ajv validate -s schema/blogs_schema.json -d categories/blogs.json --strict=false --spec=draft2020",
+    "validate:companies":   "ajv validate -s schema/companies_schema.json -d categories/companies.json --strict=false --spec=draft2020",
+    "validate:events":      "ajv validate -s schema/events_schema.json -d categories/events.json --strict=false --spec=draft2020",
+    "validate:videos":      "ajv validate -s schema/videos_schema.json -d categories/videos.json --strict=false --spec=draft2020",
+    "validate": "npm run validate:author && npm run validate:recruitment && npm run validate:blogs && npm run validate:companies && npm run validate:events && npm run validate:videos"
   },
   "devDependencies": {
     "ajv-cli": "^5.0.0"

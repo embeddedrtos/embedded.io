@@ -21,11 +21,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Validate Author JSON
-        run: npm run validate:author
-
-      - name: Validate Recruitment JSON
-        run: npm run validate:recruitment
+      - name: Validate all JSON
+        run: npm run validate
 
   # ── Step 2: Deploy — only on push to main, always after validate ────────
   deploy:

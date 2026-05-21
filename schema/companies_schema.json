@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Companies Schema",
+  "description": "Schema for company entries (Vietnam and overseas).",
+  "type": "array",
+  "items": { "$ref": "#/$defs/company" },
+  "$defs": {
+    "company": {
+      "type": "object",
+      "required": ["id", "name_company", "country"],
+      "properties": {
+        "id":           { "type": "string", "pattern": "^COM(VN|OB)[0-9]{2}$" },
+        "name_company": { "type": "string", "minLength": 1 },
+        "location":     { "type": "array", "items": { "type": "string" } },
+        "logo":         { "type": ["string", "null"], "format": "uri" },
+        "jobs":         { "type": "array", "items": { "type": "string", "format": "uri" } },
+        "country":      { "type": "string" }
+      }
+    }
+  }
+}

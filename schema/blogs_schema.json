@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Blogs Schema",
+  "description": "Schema for blog post entries.",
+  "type": "array",
+  "items": { "$ref": "#/$defs/blog" },
+  "$defs": {
+    "blog": {
+      "type": "object",
+      "required": ["id", "title", "slug", "date", "category", "author_id"],
+      "properties": {
+        "id":          { "type": "string", "pattern": "^BL[0-9]+$" },
+        "title":       { "type": "string", "minLength": 1 },
+        "slug":        { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "date":        { "type": "string", "format": "date" },
+        "tags":        { "type": "array", "items": { "type": "string" } },
+        "category":    { "type": "string" },
+        "author_id":   { "type": "string", "pattern": "^A[0-9]+$" },
+        "excerpt":     { "type": "string" },
+        "thumbnail":   { "type": ["string", "null"], "format": "uri" },
+        "content":     { "type": "string" }
+      }
+    }
+  }
+}

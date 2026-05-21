@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Videos Schema",
+  "description": "Schema for YouTube video entries.",
+  "type": "array",
+  "items": { "$ref": "#/$defs/video" },
+  "$defs": {
+    "video": {
+      "type": "object",
+      "required": ["id", "title", "thumbnail_url"],
+      "properties": {
+        "id":            { "type": "string", "minLength": 1 },
+        "title":         { "type": "string", "minLength": 1 },
+        "description":   { "type": "string" },
+        "channel_title": { "type": "string" },
+        "published_at":  { "type": ["string", "null"], "format": "date-time" },
+        "tags":          { "type": "array", "items": { "type": "string" } },
+        "duration":      { "type": ["string", "null"] },
+        "thumbnail_url": { "type": "string", "format": "uri" }
+      }
+    }
+  }
+}
