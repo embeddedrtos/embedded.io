@@ -12,7 +12,9 @@
     ],
     "duration": "PT12M45S",
     "thumbnail_url": "https://img.youtube.com/vi/pzcllub7kuU/hqdefault.jpg",
-    "video_id": "pzcllub7kuU"
+    "video_id": "pzcllub7kuU",
+    "url": "https://www.youtube.com/watch?v=pzcllub7kuU",
+    "embed": "https://www.youtube.com/embed/pzcllub7kuU"
   },
   {
     "id": "mTJ_vKlMS_4",
@@ -27,7 +29,9 @@
     ],
     "duration": null,
     "thumbnail_url": "https://img.youtube.com/vi/mTJ_vKlMS_4/hqdefault.jpg",
-    "video_id": "mTJ_vKlMS_4"
+    "video_id": "mTJ_vKlMS_4",
+    "url": "https://www.youtube.com/watch?v=mTJ_vKlMS_4",
+    "embed": "https://www.youtube.com/embed/mTJ_vKlMS_4"
   },
   {
     "id": "jR5E5Kz9A-k",
@@ -42,7 +46,9 @@
     ],
     "duration": null,
     "thumbnail_url": "https://img.youtube.com/vi/jR5E5Kz9A-k/hqdefault.jpg",
-    "video_id": "jR5E5Kz9A-k"
+    "video_id": "jR5E5Kz9A-k",
+    "url": "https://www.youtube.com/watch?v=jR5E5Kz9A-k",
+    "embed": "https://www.youtube.com/embed/jR5E5Kz9A-k"
   },
   {
     "id": "_wGK9_dUjJg",
@@ -57,7 +63,9 @@
     ],
     "duration": null,
     "thumbnail_url": "https://img.youtube.com/vi/_wGK9_dUjJg/hqdefault.jpg",
-    "video_id": "_wGK9_dUjJg"
+    "video_id": "_wGK9_dUjJg",
+    "url": "https://www.youtube.com/watch?v=_wGK9_dUjJg",
+    "embed": "https://www.youtube.com/embed/_wGK9_dUjJg"
   },
   {
     "id": "n1NRV0SjnQE",
@@ -72,7 +80,9 @@
     ],
     "duration": null,
     "thumbnail_url": "https://img.youtube.com/vi/n1NRV0SjnQE/hqdefault.jpg",
-    "video_id": "n1NRV0SjnQE"
+    "video_id": "n1NRV0SjnQE",
+    "url": "https://www.youtube.com/watch?v=n1NRV0SjnQE",
+    "embed": "https://www.youtube.com/embed/n1NRV0SjnQE"
   },
   {
     "id": "hArOFZlov9c",
@@ -87,7 +97,9 @@
     ],
     "duration": null,
     "thumbnail_url": "https://img.youtube.com/vi/hArOFZlov9c/hqdefault.jpg",
-    "video_id": "hArOFZlov9c"
+    "video_id": "hArOFZlov9c",
+    "url": "https://www.youtube.com/watch?v=hArOFZlov9c",
+    "embed": "https://www.youtube.com/embed/hArOFZlov9c"
   },
   {
     "id": "3Kevk3l6vPs",
@@ -102,7 +114,9 @@
     ],
     "duration": null,
     "thumbnail_url": "https://img.youtube.com/vi/3Kevk3l6vPs/hqdefault.jpg",
-    "video_id": "3Kevk3l6vPs"
+    "video_id": "3Kevk3l6vPs",
+    "url": "https://www.youtube.com/watch?v=3Kevk3l6vPs",
+    "embed": "https://www.youtube.com/embed/3Kevk3l6vPs"
   },
   {
     "id": "PcE-2VjtYF4",
@@ -117,7 +131,9 @@
     ],
     "duration": null,
     "thumbnail_url": "https://img.youtube.com/vi/PcE-2VjtYF4/hqdefault.jpg",
-    "video_id": "PcE-2VjtYF4"
+    "video_id": "PcE-2VjtYF4",
+    "url": "https://www.youtube.com/watch?v=PcE-2VjtYF4",
+    "embed": "https://www.youtube.com/embed/PcE-2VjtYF4"
   },
   {
     "id": "NxzjYpRI-Zc",
@@ -132,7 +148,9 @@
     ],
     "duration": null,
     "thumbnail_url": "https://img.youtube.com/vi/NxzjYpRI-Zc/hqdefault.jpg",
-    "video_id": "NxzjYpRI-Zc"
+    "video_id": "NxzjYpRI-Zc",
+    "url": "https://www.youtube.com/watch?v=NxzjYpRI-Zc",
+    "embed": "https://www.youtube.com/embed/NxzjYpRI-Zc"
   },
   {
     "id": "VgCALN3w0h0",
@@ -147,7 +165,9 @@
     ],
     "duration": null,
     "thumbnail_url": "https://img.youtube.com/vi/VgCALN3w0h0/hqdefault.jpg",
-    "video_id": "VgCALN3w0h0"
+    "video_id": "VgCALN3w0h0",
+    "url": "https://www.youtube.com/watch?v=VgCALN3w0h0",
+    "embed": "https://www.youtube.com/embed/VgCALN3w0h0"
   },
   {
     "id": "Sow2E9N7SVE",
@@ -162,7 +182,9 @@
     ],
     "duration": null,
     "thumbnail_url": "https://img.youtube.com/vi/Sow2E9N7SVE/hqdefault.jpg",
-    "video_id": "Sow2E9N7SVE"
+    "video_id": "Sow2E9N7SVE",
+    "url": "https://www.youtube.com/watch?v=Sow2E9N7SVE",
+    "embed": "https://www.youtube.com/embed/Sow2E9N7SVE"
   },
   {
     "id": "v6kUPnKs4TU",
@@ -177,6 +199,8 @@
     ],
     "duration": null,
     "thumbnail_url": "https://img.youtube.com/vi/v6kUPnKs4TU/hqdefault.jpg",
-    "video_id": "v6kUPnKs4TU"
+    "video_id": "v6kUPnKs4TU",
+    "url": "https://www.youtube.com/watch?v=v6kUPnKs4TU",
+    "embed": "https://www.youtube.com/embed/v6kUPnKs4TU"
   }
 ]
