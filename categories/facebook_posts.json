@@ -1,0 +1,227 @@
+[
+  {
+    "id": "108431818921623_699788949792932",
+    "title": "🧭Vị trí thật sự của Vector Table trên Cortex-M và lý do STM32 không cần set VTOR",
+    "description": null,
+    "created_time": "2025-09-28T10:40:03+0000",
+    "permalink_url": "https://www.facebook.com/644735448631616/posts/699788949792932",
+    "full_picture": "embeddedio/assets/placeholder-post.svg",
+    "author": {
+      "id": "A001",
+      "name": "Pham Van Nhat",
+      "bio": "Hi there, I'm Nhat, an embedded systems engineer passionate about IoT, real-time systems, and AI integration.",
+      "avatar": "https://avatars.githubusercontent.com/u/156271796?v=4",
+      "job_title": "Embedded Software Engineer",
+      "company": "Ho Chi Minh City University of Technology",
+      "email": "embeddedrtos.vietnam@gmail.com",
+      "roles": {
+        "id": "admin",
+        "name": "Admin",
+        "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/shield.svg",
+        "description": "Manages the community, sets direction, and ensures smooth operations."
+      },
+      "badges": [
+        {
+          "id": "top_contributor",
+          "name": "Top Contributor",
+          "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/star.svg",
+          "description": "Recognized for consistently making valuable contributions."
+        },
+        {
+          "id": "open_source_contributor",
+          "name": "Open Source Contributor",
+          "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/globe.svg",
+          "description": "Acknowledged for contributing to open-source projects."
+        }
+      ],
+      "socials": {
+        "github": "https://github.com/embeddedrtos",
+        "facebook": "https://www.facebook.com/emrtosVN",
+        "youtube": null,
+        "linkedin": null,
+        "twitter": null
+      }
+    },
+    "category": "ARM"
+  },
+  {
+    "id": "108431818921623_699691009802726",
+    "title": "🔹 Thạch anh – Trái tim dao động của hệ thống nhúng",
+    "description": null,
+    "created_time": "2025-09-28T07:53:42+0000",
+    "permalink_url": "https://www.facebook.com/644735448631616/posts/699691009802726",
+    "full_picture": "embeddedio/assets/placeholder-post.svg",
+    "author": {
+      "id": "A001",
+      "name": "Pham Van Nhat",
+      "bio": "Hi there, I'm Nhat, an embedded systems engineer passionate about IoT, real-time systems, and AI integration.",
+      "avatar": "https://avatars.githubusercontent.com/u/156271796?v=4",
+      "job_title": "Embedded Software Engineer",
+      "company": "Ho Chi Minh City University of Technology",
+      "email": "embeddedrtos.vietnam@gmail.com",
+      "roles": {
+        "id": "admin",
+        "name": "Admin",
+        "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/shield.svg",
+        "description": "Manages the community, sets direction, and ensures smooth operations."
+      },
+      "badges": [
+        {
+          "id": "top_contributor",
+          "name": "Top Contributor",
+          "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/star.svg",
+          "description": "Recognized for consistently making valuable contributions."
+        },
+        {
+          "id": "open_source_contributor",
+          "name": "Open Source Contributor",
+          "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/globe.svg",
+          "description": "Acknowledged for contributing to open-source projects."
+        }
+      ],
+      "socials": {
+        "github": "https://github.com/embeddedrtos",
+        "facebook": "https://www.facebook.com/emrtosVN",
+        "youtube": null,
+        "linkedin": null,
+        "twitter": null
+      }
+    },
+    "category": "MCU"
+  },
+  {
+    "id": "108431818921623_699594069812420",
+    "title": "“Rust – Ngôn ngữ lập trình thật sự phù hợp cho Embedded hiện đại?”",
+    "description": null,
+    "created_time": "2025-09-28T05:00:07+0000",
+    "permalink_url": "https://www.facebook.com/644735448631616/posts/699594069812420",
+    "full_picture": "embeddedio/assets/placeholder-post.svg",
+    "author": {
+      "id": "A001",
+      "name": "Pham Van Nhat",
+      "bio": "Hi there, I'm Nhat, an embedded systems engineer passionate about IoT, real-time systems, and AI integration.",
+      "avatar": "https://avatars.githubusercontent.com/u/156271796?v=4",
+      "job_title": "Embedded Software Engineer",
+      "company": "Ho Chi Minh City University of Technology",
+      "email": "embeddedrtos.vietnam@gmail.com",
+      "roles": {
+        "id": "admin",
+        "name": "Admin",
+        "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/shield.svg",
+        "description": "Manages the community, sets direction, and ensures smooth operations."
+      },
+      "badges": [
+        {
+          "id": "top_contributor",
+          "name": "Top Contributor",
+          "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/star.svg",
+          "description": "Recognized for consistently making valuable contributions."
+        },
+        {
+          "id": "open_source_contributor",
+          "name": "Open Source Contributor",
+          "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/globe.svg",
+          "description": "Acknowledged for contributing to open-source projects."
+        }
+      ],
+      "socials": {
+        "github": "https://github.com/embeddedrtos",
+        "facebook": "https://www.facebook.com/emrtosVN",
+        "youtube": null,
+        "linkedin": null,
+        "twitter": null
+      }
+    },
+    "category": "Language"
+  },
+  {
+    "id": "108431818921623_698001999971627",
+    "title": "Hiểu nhanh về DDR và SRAM trên các dòng chip Embedded 🌟",
+    "description": null,
+    "created_time": "2025-09-26T05:56:40+0000",
+    "permalink_url": "https://www.facebook.com/644735448631616/posts/698001999971627",
+    "full_picture": "embeddedio/assets/placeholder-post.svg",
+    "author": {
+      "id": "A001",
+      "name": "Pham Van Nhat",
+      "bio": "Hi there, I'm Nhat, an embedded systems engineer passionate about IoT, real-time systems, and AI integration.",
+      "avatar": "https://avatars.githubusercontent.com/u/156271796?v=4",
+      "job_title": "Embedded Software Engineer",
+      "company": "Ho Chi Minh City University of Technology",
+      "email": "embeddedrtos.vietnam@gmail.com",
+      "roles": {
+        "id": "admin",
+        "name": "Admin",
+        "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/shield.svg",
+        "description": "Manages the community, sets direction, and ensures smooth operations."
+      },
+      "badges": [
+        {
+          "id": "top_contributor",
+          "name": "Top Contributor",
+          "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/star.svg",
+          "description": "Recognized for consistently making valuable contributions."
+        },
+        {
+          "id": "open_source_contributor",
+          "name": "Open Source Contributor",
+          "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/globe.svg",
+          "description": "Acknowledged for contributing to open-source projects."
+        }
+      ],
+      "socials": {
+        "github": "https://github.com/embeddedrtos",
+        "facebook": "https://www.facebook.com/emrtosVN",
+        "youtube": null,
+        "linkedin": null,
+        "twitter": null
+      }
+    },
+    "category": "Driver"
+  },
+  {
+    "id": "108431818921623_667905106314650",
+    "title": "Embedded Systems: Nên học Linux hay Windows?",
+    "description": "Khi bước vào thế giới lập trình nhúng (Embedded), một trong những câu hỏi quan trọng nhất chính là: Hệ điều hành nào phù hợp để học và làm việc lâu dài? Dưới đây là góc nhìn phân tích:\n\n🔹 1. Embedded Linux\n\n✅ Ưu điểm\n\nMã nguồn mở: miễn phí, dễ tùy biến, cộng đồng lớn.\n\nKhả năng mở rộng: từ thiết bị nhỏ (IoT, router) cho tới hệ thống phức tạp (ô tô, robot, thiết bị y tế).\n\nHệ sinh thái phong phú: hỗ trợ đa dạng vi xử lý ARM, RISC-V, x86…\n\nKỹ năng phổ biến: hầu hết công ty công nghiệp, ô tô, viễn thông đều dùng Linux.\n\n⚠️ Nhược điểm\n\nĐộ phức tạp cao → cần kiến thức hệ điều hành, kernel, driver.\n\nĐường cong học tập dốc → khó với người mới bắt đầu nếu chưa quen môi trường Linux.\n\n🔹 2. Windows (Windows Embedded / Windows IoT)\n\n✅ Ưu điểm\n\nGiao diện thân thiện: dễ tiếp cận với lập trình viên quen Windows.\n\nTích hợp hệ sinh thái Microsoft: Azure IoT, Visual Studio, .NET, SQL Server.\n\nGUI mạnh mẽ: dễ xây dựng giao diện HMI, kiosk, thiết bị công nghiệp có màn hình.\n\n⚠️ Nhược điểm\n\nÍt phổ biến hơn trong lĩnh vực nhúng hiện đại.\n\nChi phí bản quyền → không phù hợp cho dự án nhỏ hoặc startup.\n\nÍt tùy biến so với Linux.\n\n🔹 3. Nên chọn gì?\n\n👉 Nếu mục tiêu của bạn là:\n\nLàm việc với IoT, Automotive, Robotics, công nghiệp → Linux là lựa chọn tốt nhất.\n\nLàm việc trong hệ sinh thái Microsoft, HMI, doanh nghiệp → Windows Embedded/IoT đáng cân nhắc.\n\n📌 Thực tế tại Việt Nam và quốc tế, hầu hết dự án nhúng nghiêng về Linux do tính mở rộng, cộng đồng hỗ trợ, và cơ hội việc làm rộng rãi.\n\n👉 Còn bạn thì sao? Nếu phải chọn Linux hay Windows để học nhúng ngay từ hôm nay, bạn sẽ chọn gì?\n#posts #A001 #embeddedrtos #CADrive #window #linux",
+    "created_time": "2025-08-19T11:14:21+0000",
+    "permalink_url": "https://www.facebook.com/644735448631616/posts/667905106314650",
+    "full_picture": "embeddedio/assets/placeholder-post.svg",
+    "author": {
+      "id": "A001",
+      "name": "Pham Van Nhat",
+      "bio": "Hi there, I'm Nhat, an embedded systems engineer passionate about IoT, real-time systems, and AI integration.",
+      "avatar": "https://avatars.githubusercontent.com/u/156271796?v=4",
+      "job_title": "Embedded Software Engineer",
+      "company": "Ho Chi Minh City University of Technology",
+      "email": "embeddedrtos.vietnam@gmail.com",
+      "roles": {
+        "id": "admin",
+        "name": "Admin",
+        "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/shield.svg",
+        "description": "Manages the community, sets direction, and ensures smooth operations."
+      },
+      "badges": [
+        {
+          "id": "top_contributor",
+          "name": "Top Contributor",
+          "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/star.svg",
+          "description": "Recognized for consistently making valuable contributions."
+        },
+        {
+          "id": "open_source_contributor",
+          "name": "Open Source Contributor",
+          "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/globe.svg",
+          "description": "Acknowledged for contributing to open-source projects."
+        }
+      ],
+      "socials": {
+        "github": "https://github.com/embeddedrtos",
+        "facebook": "https://www.facebook.com/emrtosVN",
+        "youtube": null,
+        "linkedin": null,
+        "twitter": null
+      }
+    },
+    "category": "Drive"
+  }
+]

@@ -1,5 +1,43 @@
 [
   {
+    "id": "108431818921623_691863773918783",
+    "created_time": "2025-09-18T17:03:41+0000",
+    "full_picture": "embeddedio/assets/placeholder-recruitment.svg",
+    "company": {
+      "name": "ABCDEF Tech"
+    },
+    "title": "Embedded Software Engineer (CA55/RTOS)",
+    "description": "Develop firmware for embedded systems, working with RTOS and hardware interfacing.",
+    "level": "Mid",
+    "location": {
+      "type": "Onsite",
+      "address": "Block XYZ",
+      "city": "Ho Chi Minh"
+    },
+    "salary": "15-30M VND (negotiable)",
+    "work_time": "9:00-18:00 (Th 2-6)",
+    "requirements": [
+      "C/C++",
+      "FreeRTOS/Zephyr",
+      "UART/SPI/I2C"
+    ],
+    "benefits": [
+      "Competitive salary",
+      "Social & Health Insurance",
+      "Performance review every 6 months"
+    ],
+    "apply_deadline": "30/09/2025",
+    "apply": {
+      "email": "hr@abctech.vn",
+      "contact_person": "Nguyen Van A (HR)"
+    },
+    "tags": [
+      "embedded",
+      "firmware",
+      "RTOS"
+    ]
+  },
+  {
     "id": "REC001",
     "company": {
       "name": "Công ty ABCDEF Tech",
